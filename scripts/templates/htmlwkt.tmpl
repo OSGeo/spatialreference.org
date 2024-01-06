@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% include 'sections/head.tmpl' %}
+    <title>{{ authority }}:{{ code }}{{ wkt_type }} -- Spatial Reference</title>
+</head>
+
+<body>
+    <div id="header">
+        {% include 'sections/header.tmpl' %}
+        <div id="header_title">
+            {{ authority }}:{{ code }}{{ wkt_type }}
+        </div>
+    </div>
+    <div id="searchbox">
+        {% include 'sections/searchbox.tmpl' %}
+    </div>
+
+    <div id="navbar">
+        {% include 'sections/navbar.tmpl' %}
+    </div>
+
+    <div id="content">
+        <div class="nicewkt" id="wkt">{{ syntax_html }}</div>
+        <a href="./">More formats</a>
+    </div>
+
+    <div id="footer">
+        {% include 'sections/footer.tmpl' %}
+    </div>
+    <script src="{{ home_dir }}/base.js"></script>
+    <script>
+        fill_prettywkt("{{ wkt_filename }}")
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% include 'sections/head.tmpl' %}
+    <title>{{ authority }}:{{ code }} {{ name }} -- Spatial Reference</title>
+    {% include 'sections/leaflet.tmpl' %}
+</head>
+
+<body>
+    <div id="header">
+        {% include 'sections/header.tmpl' %}
+        <div id="header_title">
+            {{ authority }}:<wbr />{{ code }}
+        </div>
+    </div>
+    <div id="searchbox">
+        {% include 'sections/searchbox.tmpl' %}
+    </div>
+
+    <div id="navbar">
+        {% include 'sections/navbar.tmpl' %}
+    </div>
+
+    <div id="content">
+        Previous: <a href="{{ prev_url }}">{{ prev_full_name }}</a> | Next: <a href="{{ next_url }}">{{ next_full_name }}</a>
+
+        <h1>{{ authority }}:{{ code }}</h1>
+        <h2>{{ name|e }}</h2>
+        <p>
+          {%- if epsg_scaped_name %}
+            View <a href="https://epsg.org/crs_{{ code }}/{{ epsg_scaped_name }}.html" target="_blank">
+            EPSG.org defintion for EPSG:{{ code }}</a> |
+          {%- endif %}
+            <a href="http://www.google.com/search?q={{ name }}" target="_blank">Google it</a>
+        </p>
+        {%- if error %}
+        <div class="crs_error"><b>ERROR!</b> {{ error|e|replace(",", ",<wbr>") }}</div>
+        {%- endif %}
+        {%- if show_list %}
+        <ul>
+            <li><b>Type</b>: {{ crs_type }}</li>
+            <li><b>WGS84 Bounds</b>: {{ bounds }}</li>
+            <li><b>Scope</b>: {{ scope|e }}</li>
+            <li><b>Area</b>: {{ area_name|e }}</li>
+            {%- if projection_method_name %}
+            <li><b>Projection method name</b>: {{ projection_method_name }}</li>
+            {%- endif %}
+            {%- if axes %}
+            <li><b title="Info got from PROJJSON">Axes</b>: {{ axes.names }}
+                    <span title="Abbreviation">({{ axes.abbr }})</span>.
+                <b>Directions</b>: {{ axes.directions }}.
+                <b title="Unit of Measurement">UoM</b>: {{ axes.units }}.
+            </li>
+            {%- endif %}
+            {%- if deprecated %}
+            <li class="darkred"><b>Deprecated!</b></li>
+            {%- endif %}
+        </ul>
+        {%- endif %}
+
+        <div class="list-box">
+        <ul>
+            <li>WKT-1</li>
+            <ul>
+                <li><a href="wkt.html">Well Known Text as HTML</a></li>
+                <li><a href="prettywkt.txt">Human-Readable OGC WKT</a></li>
+                <li><a href="ogcwkt">OGC WKT</a></li>
+            </ul>
+            <li>WKT-2</li>
+            <ul>
+                <li><a href="wkt2.html">Well Known Text 2 as HTML</a></li>
+                <li><a href="prettywkt2.txt">Human-Readable OGC WKT2</a></li>
+            </ul>
+            <li><a href="esriwkt.txt">ESRI WKT</a></li>
+            <li><a href="#" onclick="download_prj('{{ code }}.prj', 'esriwkt.txt')" title="Download as PRJ file from ESRI">.PRJ</a></li>
+            <li><a href="projjson.json" title="PROJJSON">JSON</a></li>
+            <li><a href="proj4.txt">Proj4</a></li>
+        </ul>
+        </div>
+
+        {%- if bounds_map %}
+        <div id="map" class="map-container"></div>
+        {%- endif %}
+    </div>
+
+    <div id="footer">
+        {% include 'sections/footer.tmpl' %}
+    </div>
+
+    <script src="{{ home_dir }}/base.js"></script>
+    <script>
+        init_map([{{ bounds_map }}])
+    </script>
+</body>
+</html>
+

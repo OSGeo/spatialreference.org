@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% include 'sections/head.tmpl' %}
+    <title>Spatial Reference List -- Spatial Reference</title>
+</head>
+
+<body>
+    <div id="header">
+        {% include 'sections/header.tmpl' %}
+        <div id="header_title">
+            Spatial Reference List
+        </div>
+    </div>
+    <div id="searchbox">
+        {% include 'sections/searchbox.tmpl' %}
+    </div>
+
+    <div id="navbar">
+        {% include 'sections/navbar.tmpl' %}
+    </div>
+
+    <div id="content">
+        <div>
+            <a class="prev_page" href="?page=1">Previous Page</a> | <a class="next_page" href="?page=2">Next Page</a>
+        </div>
+        <p><form>Search References:
+            <input type="text" name="search" value="">
+            <input type="submit" value="Search" />
+        </form></p>
+
+        <p>You are only searching <b>{{ authority }}</b> references. <a class="only_searching" href="{{ home_dir }}/ref/?&amp;search=">Search All</a>?</p>
+
+        <p>Entries found: <span id="found"></span> <span id="searched_text"></span></p>
+        <div class="outer-wrapper">
+            <div class="inner-flexbox">
+                <div id="list1">
+                    <ul>
+                    </ul>
+                </div>
+                <div id="list2">
+                    <ul>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div>
+            <a class="prev_page" href="?page=1">Previous Page</a> | <a class="next_page" href="?page=2">Next Page</a>
+        </div>
+    </div>
+
+    <div id="footer">
+        {% include 'sections/footer.tmpl' %}
+    </div>
+    <script src="{{ home_dir }}/base.js"></script>
+    <script>
+        init_ref("{{ home_dir }}", "{{ authority }}")
+    </script>
+
+</body>
+</html>

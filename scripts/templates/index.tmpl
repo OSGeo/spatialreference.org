@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% include 'sections/head.tmpl' %}
+    <title>Home -- Spatial Reference</title>
+</head>
+
+<body>
+    <div id="header">
+        {% include 'sections/header.tmpl' %}
+        <div id="header_title">
+            Welcome
+        </div>
+    </div>
+    <div id="searchbox">
+        {% include 'sections/searchbox.tmpl' %}
+    </div>
+
+    <div id="navbar">
+        {% include 'sections/navbar.tmpl' %}
+    </div>
+
+    <div id="content">
+        <h2>Find your references in any number of formats!</h2>
+        <ul>
+            <li>See Existing EPSG Codes: <a href="{{ home_dir }}/ref/epsg/4326/">4326</a>, <a href="{{ home_dir }}/ref/epsg/6492/">6492</a></li>
+            <li>Browse a list:
+                <ul>
+                    <li>{{ count_epsg }} <a href="{{ home_dir }}/ref/epsg/">EPSG</a> references</li>
+                    <li>{{ count_esri }} <a href="{{ home_dir }}/ref/esri/">ESRI</a> references</li>
+                    <li>{{ count_iau_2015 }} <a href="{{ home_dir }}/ref/iau_2015/">IAU:2015</a> references</li>
+                    <li>{{ count_ignf }} <a href="{{ home_dir }}/ref/ignf/">IGNF</a> references</li>
+                    <li>{{ count_nkg }} <a href="{{ home_dir }}/ref/nkg/">NKG</a> references</li>
+                    <li>{{ count_ogc }} <a href="{{ home_dir }}/ref/ogc/">OGC</a> references</li>
+                </ul>
+            </li>
+            {% if count_iau2000 is defined or count_sr_org is defined %}
+            <li>Lists frozen on 2023-12-10:
+                <ul>
+                    {% if count_iau2000 is defined %}
+                    <li>{{ count_iau2000 }} <a href="{{ home_dir }}/ref/iau2000/">IAU2000</a> references</li>
+                    {% endif %}
+                    {% if count_sr_org is defined %}
+                    <li>{{ count_sr_org }} <a href="{{ home_dir }}/ref/sr-org/">spatialreference.org</a> references</li>
+                    {% endif %}
+                </ul>
+            </li>
+            {% endif %}
+        </ul>
+        <p>Last Revised {{ last_revised }}</p>
+    </div>
+    <div id="footer">
+        {% include 'sections/footer.tmpl' %} - Code implementation inspired by <a href="https://crs-explorer.proj.org">crs-explorer.proj.org</a>
+    </div>
+
+    <script src="{{ home_dir }}/base.js"></script>
+</body>
