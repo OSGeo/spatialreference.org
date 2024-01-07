@@ -16,8 +16,16 @@ jobs:
       - run: echo "The ${{ github.repository }} repository has been cloned to the runner."
       - run: echo "The workflow is now ready to test your code on the runner."
       - name: Generate the files in docker
-        run: mkdir -p scripts/dist
+        run: scripts/run.sh
       - run: ls scripts/dist/ -lh
+      - name: Deploy ssh key
+        shell: bash -l {0}
+        run: |
+          mkdir $HOME/.ssh && echo "${{ secrets.SSH_PRIVATE_KEY }}" > $HOME/.ssh/id_rsa
+          chmod 700 $HOME/.ssh && chmod 600 $HOME/.ssh/id_rsa
+          ssh-keyscan -t rsa github.com >> $HOME/.ssh/known_hosts
+          eval `ssh-agent -s`
+          ssh-add $HOME/.ssh/id_rsa
       - name: Deploy to gh-pages
         shell: bash -l {0}
         run: |
@@ -27,13 +35,10 @@ jobs:
           git init
           git checkout -b gh-pages
           git remote add origin git@github.com:OSGeo/spatialreference.org.git
-
-          git config user.email "proj.bot@proj.bot"
-          git config user.name "PROJ deploybot"
-
+          git config user.email "spatialreference.org.bot@spatialreference.org.bot"
+          git config user.name "spatialreference.org deploybot"
           touch .nojekyll
           echo "spatialreference.org" > CNAME
-
           git add -A
           git commit -m "update with results of commit ${{ github.sha }}"
           git push -f origin gh-pages
