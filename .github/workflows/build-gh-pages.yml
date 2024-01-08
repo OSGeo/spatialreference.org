@@ -3,6 +3,8 @@ on:
   push:
     branches-ignore:
       - 'gh-pages'
+  pull_request:
+
 jobs:
   generate-files:
     runs-on: ubuntu-latest
