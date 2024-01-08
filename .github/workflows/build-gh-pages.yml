@@ -14,11 +14,11 @@ jobs:
         with:
           ref: ${{ github.head_ref }}
       - run: echo "The ${{ github.repository }} repository has been cloned to the runner."
-      - run: echo "The workflow is now ready to test your code on the runner."
       - name: Generate the files in docker
         run: scripts/run.sh
       - run: ls scripts/dist/ -lh
       - name: Deploy ssh key
+        if: ${{ github.ref_name == 'master' && github.repository == 'OSGeo/spatialreference.org' }}
         shell: bash -l {0}
         run: |
           mkdir $HOME/.ssh && echo "${{ secrets.SSH_PRIVATE_KEY }}" > $HOME/.ssh/id_rsa
@@ -27,6 +27,7 @@ jobs:
           eval `ssh-agent -s`
           ssh-add $HOME/.ssh/id_rsa
       - name: Deploy to gh-pages
+        if: ${{ github.ref_name == 'master' && github.repository == 'OSGeo/spatialreference.org' }}
         shell: bash -l {0}
         run: |
           set -x
