@@ -135,6 +135,37 @@ function init_ref(home_dir, authority) {
     });
 }
 
+function not_found(home_dir) {
+    // This function is called in case of a 404, trying to redirect old links.
+    // something like https://spatialreference.org/ref/epsg/anguilla-1957-british-west-indies-grid/
+    const loc = window.location;
+    const match = loc.pathname.match(/.*?\/ref\/(.*?)\/(.*?)\//);
+    if (!match || match.length != 3) {
+        return;
+    }
+
+    // It could be an old link. Let's analyze it
+    fetch(home_dir + '/crslist.json', {
+        method: "GET",
+    })
+    .then(response => response.json())
+    .then(data => {
+        let r = data.filter(d => {
+            if (d.auth_name.toLowerCase() != match[1])
+                return false;
+            const scaped_name = d.name.replace(/[^0-9a-zA-Z]+/g, '-').toLowerCase();
+            return scaped_name == match[2];
+        });
+        if (r.length == 1) {
+            const d = r[0];
+            const url = `${loc.origin}/ref/${match[1]}/${d.code}`;
+            const text = `However, apparently you want to visit<br/><br/>${d.auth_name}:${d.code}<br/>${d.name}<br/><br/>Redirecting to ${url}`
+            document.querySelector('#not_found_cont').innerHTML = text;
+            setTimeout(() => location.assign(url), 5000);
+        }
+    });
+}
+
 function download_prj(name, file) {
     if (name && name !=='') {
       var link = document.createElement('a');
