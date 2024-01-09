@@ -43,3 +43,31 @@ jobs:
           git add -A
           git commit -m "update with results of commit ${{ github.sha }}"
           git push -f origin gh-pages
+      - name: Deploy ssh key for scratch site (pull request)
+        if: ${{ github.event_name == 'pull_request' && github.ref_name != 'master' && github.repository == 'OSGeo/spatialreference.org' }}
+        shell: bash -l {0}
+        run: |
+          sudo apt install hxtools
+          mkdir $HOME/.ssh
+          # Note: this is obviously unsecure !!! But we don't mind if the content of sr-org-scratch/sr-org-scratch is "compromised"
+          cat .github/workflows/some_secret.txt | rot13 > $HOME/.ssh/id_rsa
+          chmod 700 $HOME/.ssh && chmod 600 $HOME/.ssh/id_rsa
+          ssh-keyscan -t rsa github.com >> $HOME/.ssh/known_hosts
+          eval `ssh-agent -s`
+          ssh-add $HOME/.ssh/id_rsa
+      - name: Deploy HTML pages to scratch site (pull request)
+        if: ${{ github.event_name == 'pull_request' && github.ref_name != 'master' && github.repository == 'OSGeo/spatialreference.org' }}
+        shell: bash -l {0}
+        run: |
+          set -x
+          set -e
+          cd scripts/dist/
+          git init
+          git remote add origin git@github.com:sr-org-scratch/sr-org-scratch.github.io.git
+          git config user.email "spatialreference.org.bot@spatialreference.org.bot"
+          git config user.name "spatialreference.org deploybot"
+          touch .nojekyll
+          echo "User-agent: * Disallow: /" > robots.txt
+          git add -A
+          git commit -m "update with results of commit ${{ github.sha }}"
+          git push -f origin master

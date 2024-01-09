@@ -1,0 +1,38 @@
+name: clean-scratch-site
+
+# Controls when the action will run.
+on:
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  clean-scratch-site:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy ssh key for scratch site
+        shell: bash -l {0}
+        run: |
+          sudo apt install hxtools
+          mkdir $HOME/.ssh
+          # Note: this is obviously unsecure !!! But we don't mind if the content of sr-org-scratch/sr-org-scratch is "compromised"
+          cat .github/workflows/some_secret.txt | rot13 > $HOME/.ssh/id_rsa
+          chmod 700 $HOME/.ssh && chmod 600 $HOME/.ssh/id_rsa
+          ssh-keyscan -t rsa github.com >> $HOME/.ssh/known_hosts
+          eval `ssh-agent -s`
+          ssh-add $HOME/.ssh/id_rsa
+      - name: Reset content of scratch site
+        shell: bash -l {0}
+        run: |
+          set -x
+          set -e
+          mkdir empty
+          cd empty
+          git init
+          git remote add origin git@github.com:sr-org-scratch/sr-org-scratch.github.io.git
+          git config user.email "spatialreference.org.bot@spatialreference.org.bot"
+          git config user.name "spatialreference.org deploybot"
+          touch .nojekyll
+          echo "User-agent: * Disallow: /" > robots.txt
+          git add -A
+          git commit -m "empty site"
+          git push -f origin master
