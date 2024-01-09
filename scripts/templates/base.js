@@ -139,8 +139,19 @@ function not_found(home_dir) {
     // This function is called in case of a 404, trying to redirect old links.
     // something like https://spatialreference.org/ref/epsg/anguilla-1957-british-west-indies-grid/
     const loc = window.location;
-    const match = loc.pathname.match(/.*?\/ref\/(.*?)\/(.*?)\//);
+    const match = loc.pathname.match(/.*?\/ref\/(.*?)\/(.*)/);
     if (!match || match.length != 3) {
+        return;
+    }
+    const auth_in_url = match[1];
+    const name_in_url = match[2].endsWith('/') ? match[2].slice(0, -1) : match[2];
+
+    // Not supported anymore. Give the user at least the JSON file with the data.
+    if (auth_in_url == "sr-org" || auth_in_url == "iau2000") {
+        const url = `https://github.com/OSGeo/spatialreference.org/blob/master/scripts/${auth_in_url}.json`;
+        const text = `Sorry, ${auth_in_url} is not supported anymore. You can get old data from file<br/>` +
+                     `<a href="${url}" target="_blank">${url}</a>`;
+        document.querySelector('#not_found_cont').innerHTML = text;
         return;
     }
 
@@ -151,15 +162,17 @@ function not_found(home_dir) {
     .then(response => response.json())
     .then(data => {
         let r = data.filter(d => {
-            if (d.auth_name.toLowerCase() != match[1])
+            if (d.auth_name.toLowerCase() != auth_in_url)
                 return false;
             const scaped_name = d.name.replace(/[^0-9a-zA-Z]+/g, '-').toLowerCase();
-            return scaped_name == match[2];
+            return scaped_name == name_in_url;
         });
         if (r.length == 1) {
             const d = r[0];
-            const url = `${loc.origin}/ref/${match[1]}/${d.code}`;
-            const text = `However, apparently you want to visit<br/><br/>${d.auth_name}:${d.code}<br/>${d.name}<br/><br/>Redirecting to ${url}`
+            const url = `${loc.origin}/ref/${auth_in_url}/${d.code}`;
+            const text = `However, apparently you want to visit<br/><br/>` +
+                         `${d.auth_name}:${d.code}<br/>${d.name}<br/><br/>` +
+                         `Redirecting to <a href="${url}">${url}</a>`;
             document.querySelector('#not_found_cont').innerHTML = text;
             setTimeout(() => location.assign(url), 5000);
         }
