@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    {% include 'sections/head.tmpl' %}
+    <title>Home -- 404 - Page not found</title>
+</head>
+
+<body>
+    <div id="header">
+        {% include 'sections/header.tmpl' %}
+        <div id="header_title">
+            404 - Page not found
+        </div>
+    </div>
+    <div id="searchbox">
+        {% include 'sections/searchbox.tmpl' %}
+    </div>
+
+    <div id="navbar">
+        {% include 'sections/navbar.tmpl' %}
+    </div>
+
+    <div id="content" style="text-align: center;">
+        <h1>404</h1>
+        <h2>File not found</h2>
+        <p id="not_found_cont"></p>
+    </div>
+    <div id="footer">
+        {% include 'sections/footer.tmpl' %}
+    </div>
+    <script src="{{ home_dir }}/base.js"></script>
+    <script>
+        not_found("{{ home_dir }}")
+    </script>
+</body>
