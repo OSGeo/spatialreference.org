@@ -174,7 +174,9 @@ def main():
     mapping = make_mapping('.') | count_authorities
     g.render('index.tmpl', f'{dest_dir}', mapping)
     g.render('about.tmpl', f'{dest_dir}/about.html', mapping)
+    mapping = make_mapping('..')
     g.render('ref.tmpl', f'{dest_dir}/ref/', mapping)
+
     mapping = make_mapping('') # relative paths do not work in a 404. It can be anywhere
     g.render('404.tmpl', f'{dest_dir}/404.html', mapping)
 
