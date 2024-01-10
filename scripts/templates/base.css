@@ -74,6 +74,10 @@ padding: 10px;
     color: darkred;
 }
 
+.deprecated_in_list {
+    color: grey;
+}
+
 .about_items {
     color: darkolivegreen;
 }

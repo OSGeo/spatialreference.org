@@ -36,6 +36,9 @@ function generate_entries(data, home_dir, from, number, container) {
         li.appendChild(a);
         name_broken = crs.name.replaceAll('_', '<wbr />_')
         li.innerHTML += `: ${name_broken}`;
+        if (crs.deprecated) {
+            li.innerHTML += ' <span class="deprecated_in_list">(deprecated)</span>';
+        }
         container.appendChild(li);
     }
 }
