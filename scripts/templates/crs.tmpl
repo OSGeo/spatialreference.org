@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ lang }}">
 <head>
     {% include 'sections/head.tmpl' %}
     <title>{{ authority }}:{{ code }} {{ name }} -- Spatial Reference</title>
@@ -10,7 +10,7 @@
     <div id="header">
         {% include 'sections/header.tmpl' %}
         <div id="header_title">
-            {{ authority }}:<wbr />{{ code }}
+            {{ authority }}:<wbr>{{ code }}
         </div>
     </div>
     <div id="searchbox">
@@ -31,7 +31,7 @@
             View <a href="https://epsg.org/crs_{{ code }}/{{ epsg_scaped_name }}.html" target="_blank">
             EPSG.org definition for EPSG:{{ code }}</a> |
           {%- endif %}
-            <a href="http://www.google.com/search?q={{ name }}" target="_blank">Google it</a>
+            <a href="http://www.google.com/search?q={{ encoded_name }}" target="_blank">Google it</a>
         </p>
         {%- if error %}
         <div class="crs_error"><b>ERROR!</b> {{ error|e|replace(",", ",<wbr>") }}</div>
@@ -60,17 +60,19 @@
 
         <div class="list-box">
         <ul>
-            <li>WKT-1</li>
-            <ul>
-                <li><a href="wkt.html">Well Known Text as HTML</a></li>
-                <li><a href="prettywkt.txt">Human-Readable OGC WKT</a></li>
-                <li><a href="ogcwkt">OGC WKT</a></li>
-            </ul>
-            <li>WKT-2</li>
-            <ul>
-                <li><a href="wkt2.html">Well Known Text 2 as HTML</a></li>
-                <li><a href="prettywkt2.txt">Human-Readable OGC WKT2</a></li>
-            </ul>
+            <li>WKT-1
+                <ul>
+                    <li><a href="wkt.html">Well Known Text as HTML</a></li>
+                    <li><a href="prettywkt.txt">Human-Readable OGC WKT</a></li>
+                    <li><a href="ogcwkt">OGC WKT</a></li>
+                </ul>
+            </li>
+            <li>WKT-2
+                <ul>
+                    <li><a href="wkt2.html">Well Known Text 2 as HTML</a></li>
+                    <li><a href="prettywkt2.txt">Human-Readable OGC WKT2</a></li>
+                </ul>
+            </li>
             <li><a href="esriwkt.txt">ESRI WKT</a></li>
             <li><a href="#" onclick="download_prj('{{ code }}.prj', 'esriwkt.txt')" title="Download as PRJ file from ESRI">.PRJ</a></li>
             <li><a href="projjson.json" title="PROJJSON">JSON</a></li>

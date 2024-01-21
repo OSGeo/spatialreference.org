@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ lang }}">
 <head>
     {% include 'sections/head.tmpl' %}
     <title>Spatial Reference List -- Spatial Reference</title>
@@ -24,10 +24,14 @@
         <div>
             <a class="prev_page" href="?page=1">Previous Page</a> | <a class="next_page" href="?page=2">Next Page</a>
         </div>
-        <p><form>Search References:
+        <form>Search References:
             <input type="text" name="search" value="">
-            <input type="submit" value="Search" />
-        </form></p>
+            <input type="submit" value="Search">
+        </form>
+
+        {%- if authority is defined and authority %}
+        <p>You are only searching <b>{{ authority }}</b> references. <a class="only_searching" href="{{ home_dir }}/ref/?&amp;search=">Search All</a>?</p>
+        {%- endif %}
 
         <p>Entries found: <span id="found"></span> <span id="searched_text"></span></p>
         <div class="outer-wrapper">
@@ -52,7 +56,7 @@
     </div>
     <script src="{{ home_dir }}/base.js"></script>
     <script>
-        init_ref("{{ home_dir }}")
+        init_ref("{{ home_dir }}", "{{ authority if authority else '' }}")
     </script>
 
 </body>
