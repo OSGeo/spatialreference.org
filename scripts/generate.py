@@ -161,7 +161,7 @@ def main():
     crss = make_crslist(dest_dir)
 
     # copy some literal files, not modified
-    for literal in ['base.js', 'base.css', 'sr_logo.jpg', 'favicon.ico']:
+    for literal in ['base.js', 'base.css', 'sr_logo.jpg', 'favicon.ico', 'tests.html']:
         shutil.copy(f'./templates/{literal}', dest_dir)
 
     authorities = {
