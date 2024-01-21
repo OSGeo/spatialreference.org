@@ -7,6 +7,7 @@ from itertools import groupby
 from pathlib import Path
 from datetime import date
 from string import Template
+from urllib.parse import quote_plus
 
 from pygments.lexer import RegexLexer
 from pygments.token import *
@@ -108,6 +109,8 @@ def make_crslist(dest_dir):
 def make_mapping(home_dir):
     today = date.today().isoformat()
     mapping = {'home_dir': home_dir,
+               'lang': 'en',
+               'authority': None,
                'last_revised': os.getenv('LAST_REVISED', '-missing-'),
                'proj_version': os.getenv('PROJ_VERSION', '-missing-'),
                'built_date': today,}
@@ -158,7 +161,7 @@ def main():
     crss = make_crslist(dest_dir)
 
     # copy some literal files, not modified
-    for literal in ['base.js', 'base.css', 'sr_logo.jpg', 'favicon.ico']:
+    for literal in ['base.js', 'base.css', 'sr_logo.jpg', 'favicon.ico', 'tests.html']:
         shutil.copy(f'./templates/{literal}', dest_dir)
 
     authorities = {
@@ -183,7 +186,7 @@ def main():
     mapping = make_mapping('../..')
     for authority in authorities.keys():
         mapping['authority'] = authority
-        g.render('authority.tmpl', f'{dest_dir}/ref/{authority.lower()}/', mapping)
+        g.render('ref.tmpl', f'{dest_dir}/ref/{authority.lower()}/', mapping)
 
     mapping_ref = make_mapping('../../..')
     mapping_wkt = make_mapping('../../..')
@@ -250,6 +253,7 @@ def main():
                'authority': auth_name,
                'code': code,
                'name': name,
+               'encoded_name': quote_plus(name),
                'area_name': aou[4] if aou else 'Unknown',
                'epsg_scaped_name': epsg_scaped_name,
                'deprecated': c.get("deprecated", False),

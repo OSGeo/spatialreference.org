@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noindex, nofollow">
+        <title>Test links -- Spatial Reference </title>
+    </head>
+
+<body>
+    Page with some links of pages useful to test visually. Not intended to be used by general public.
+    <ul>
+        <li><a href="./">Index</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./ref/">All references</a></li>
+        <li><a href="./ref/epsg/">EPSG</a></li>
+        <li><a href="./ref/esri">ESRI</a></li>
+        <li><a href="./ref/?search=utm+32">Search "utm 32"</a></li>
+        <li><a href="./ref/?page=2&search=utm+32">Search "utm 32", page 2</a></li>
+        <li><a href="./ref/epsg/?search=utm+32">Search "utm 32" in EPSG</a></li>
+        <li><a href="./ref/epsg/?search=Locodjo+1965+%2F+UTM">Search "Locodjo 1965 / UTM"</a></li>
+        <li></li>
+        <li><a href="./ref/epsg/2000/">EPSG 2000</a></li>
+        <li>Per CRS
+            <ul>
+                <li><a href="./ref/epsg/2000/wkt.html">WKT1</a></li>
+                <li><a href="./ref/epsg/2000/prettywkt.txt">Pretty WKT1</a></li>
+                <li><a href="./ref/epsg/2000/ogcwkt/">OGC WKT1</a></li>
+
+                <li><a href="./ref/epsg/2000/wkt2.html">WKT2</a></li>
+                <li><a href="./ref/epsg/2000/prettywkt2.txt">Pretty WKT2</a></li>
+
+                <li><a href="./ref/epsg/2000/esriwkt.txt">ESRI WKT</a></li>
+                <li><a href="./ref/epsg/2000/projjson.json">PROJJSON</a></li>
+                <li><a href="./ref/epsg/2000/proj4.txt">Proj4</a></li>
+            </ul>
+        </li>
+
+
+        <li><a href="./ref/ogc/CRS84h/">Last element</a></li>
+
+        <li><a href="./ref/epsg/4327/">Deprecated</a></li>
+
+        <li></li>
+        <li><a href="./ref/epsg/anguilla-1957-british-west-indies-grid/">Known 404</a></li>
+        <li><a href="./ref/sr-org/google-projection/">sr-org 404</a></li>
+        <li><a href="./ref/blablabla/foobar">Garbage 404</a></li>
+    </ul>
+
+    <script>
+        function fill_data() {
+            const lis = document.querySelectorAll('li');
+            Array.from(lis).forEach(li => {
+                const a = li.querySelector(':scope > a');
+                if (a) {
+                    const href = a.getAttribute('href');
+                    li.innerHTML += ` (${href})`;
+                    if (!href.endsWith('.txt') && !href.endsWith('.json')) {
+                        const link = new URL(`${window.location.href}/../${href}`).href;
+                        li.innerHTML += ` <a href="https://validator.w3.org/nu/?doc=${encodeURIComponent(link)}" target="_blank">check</a>`;
+                    }
+                }
+
+            })
+        }
+        fill_data();
+    </script>
+</body>
+</html>

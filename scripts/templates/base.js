@@ -34,7 +34,7 @@ function generate_entries(data, home_dir, from, number, container) {
         a.href = `${home_dir}/ref/${crs.auth_name.toLowerCase()}/${crs.code}/`;
         a.innerText = `${crs.auth_name}:${crs.code}`;
         li.appendChild(a);
-        name_broken = crs.name.replaceAll('_', '<wbr />_')
+        name_broken = crs.name.replaceAll('_', '<wbr>_')
         li.innerHTML += `: ${name_broken}`;
         if (crs.deprecated) {
             li.innerHTML += ' <span class="deprecated_in_list">(deprecated)</span>';
@@ -152,7 +152,7 @@ function not_found(home_dir) {
     // Not supported anymore. Give the user at least the JSON file with the data.
     if (auth_in_url == "sr-org" || auth_in_url == "iau2000") {
         const url = `https://github.com/OSGeo/spatialreference.org/blob/master/scripts/${auth_in_url}.json`;
-        const text = `Sorry, ${auth_in_url} is not supported anymore. You can get old data from file<br/>` +
+        const text = `Sorry, ${auth_in_url} is not supported anymore. You can get old data from file<br>` +
                      `<a href="${url}" target="_blank">${url}</a>`;
         document.querySelector('#not_found_cont').innerHTML = text;
         return;
@@ -173,8 +173,8 @@ function not_found(home_dir) {
         if (r.length == 1) {
             const d = r[0];
             const url = `${loc.origin}/ref/${auth_in_url}/${d.code}`;
-            const text = `However, apparently you want to visit<br/><br/>` +
-                         `${d.auth_name}:${d.code}<br/>${d.name}<br/><br/>` +
+            const text = `However, apparently you want to visit<br><br>` +
+                         `${d.auth_name}:${d.code}<br>${d.name}<br><br>` +
                          `Redirecting to <a href="${url}">${url}</a>`;
             document.querySelector('#not_found_cont').innerHTML = text;
             setTimeout(() => location.assign(url), 5000);
