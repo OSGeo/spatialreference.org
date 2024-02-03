@@ -94,7 +94,13 @@ function filter_data(data, search, authority) {
 
     let r = data.filter(d => {
         let name = d.name.toUpperCase();
-        let valid = s.reduce((accum, current) => accum && name.includes(current), true);
+        let outlier = s.find(elem => !name.includes(elem));
+        if (outlier == "WGS84") {
+            // many people searches WGS84, however the EPSG name has a space: "WGS 84"
+            const s2 = s.map(elem => elem == "WGS84" ? "WGS 84" : elem);
+            outlier = s2.find(elem => !name.includes(elem));
+        }
+        let valid = (outlier == undefined);
 
         if (!isNaN(s[0]) && d.code === s[0]) {
             valid = true
