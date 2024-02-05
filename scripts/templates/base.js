@@ -73,34 +73,31 @@ function paramsToDic(location) {
 
 function filter_data(data, search, authority) {
     if (!search || !search.trim()) {
-        search = ''
+        search = '';
     }
-    let authorities = [authority]
     let s = search.toUpperCase().split(' ');
-    if (!authority) {
-        let possible_authorities = ['EPSG', 'ESRI', 'IAU_2015', 'IGNF', 'NKG', 'OGC']
-        authorities = s
-            .map(a => a.split(':')[0])
-            .filter(a => possible_authorities.includes(a));
 
-        s = s.filter(a => !possible_authorities.includes(a))
-            .map(a => {
-                if (possible_authorities.includes(a.split(':')[0])) {
-                    return a.slice(a.indexOf(':') + 1);
-                }
-                return a;
-        });
+    let auth_code = [null, s.length ? s[0] : null];
+    if (s.length == 1 && s[0].split(':').length == 2) {
+        auth_code = s[0].split(':');
     }
 
     let r = data.filter(d => {
         let name = d.name.toUpperCase();
-        let valid = s.reduce((accum, current) => accum && name.includes(current), true);
-
-        if (!isNaN(s[0]) && d.code === s[0]) {
-            valid = true
+        let outlier = s.find(elem => !name.includes(elem));
+        if (outlier == "WGS84") {
+            // many people searches WGS84, however the EPSG name has a space: "WGS 84"
+            const s2 = s.map(elem => elem == "WGS84" ? "WGS 84" : elem);
+            outlier = s2.find(elem => !name.includes(elem));
         }
-        if (authorities.length && !authorities.includes(d.auth_name)) {
-            valid = false
+        let valid = (outlier == undefined);
+
+        if (!isNaN(auth_code[1]) && d.code === auth_code[1] && (!auth_code[0] || d.auth_name === auth_code[0])) {
+            // filter by code or auth:code
+            valid = true;
+        }
+        if (authority && authority !== d.auth_name) {
+            valid = false;
         }
         return valid;
     });
