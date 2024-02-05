@@ -2,7 +2,7 @@
 set -Eeuo pipefail
 
 # indicate DOCKER PROJ version
-PROJ_VERSION=9.3.0
+PROJ_VERSION=9.3.1
 PYPROJ_VERSION=3.6.1
 LAST_REVISED=2024
 TAG="crs-explorer:$PROJ_VERSION"
