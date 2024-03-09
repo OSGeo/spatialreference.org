@@ -153,10 +153,17 @@ class Generator:
         with open(dest, "w") as fh:
             fh.write(output_from_parsed_template)
 
+def url_to_xml(prefix, file):
+    str  = f'    <url>\n'
+    str += f'        <loc>{prefix}{file}</loc>\n'
+    str += f'    </url>\n'
+    return str
 
 def main():
     dest_dir = os.getenv('DEST_DIR', '.')
     g = Generator()
+    sitemap_file = f'{dest_dir}/sitemap.xml'
+    urls = []
 
     crss = make_crslist(dest_dir)
 
@@ -176,9 +183,12 @@ def main():
 
     mapping = make_mapping('.') | count_authorities
     g.render('index.tmpl', f'{dest_dir}', mapping)
+    urls.append('')
     g.render('about.tmpl', f'{dest_dir}/about.html', mapping)
+    urls.append('about.html')
     mapping = make_mapping('..')
     g.render('ref.tmpl', f'{dest_dir}/ref/', mapping)
+    urls.append('ref/')
 
     mapping = make_mapping('') # relative paths do not work in a 404. It can be anywhere
     g.render('404.tmpl', f'{dest_dir}/404.html', mapping)
@@ -187,6 +197,7 @@ def main():
     for authority in authorities.keys():
         mapping['authority'] = authority
         g.render('ref.tmpl', f'{dest_dir}/ref/{authority.lower()}/', mapping)
+        urls.append(f'ref/{authority.lower()}/')
 
     mapping_ref = make_mapping('../../..')
     mapping_wkt = make_mapping('../../..')
@@ -227,6 +238,7 @@ def main():
         bounds = ', '.join([str(x) for x in aou[:4]]) if aou else 'Unknown'
         full_name = lambda c: f'{c["auth_name"]}:{c["code"]} : {c["name"]}'
         url = lambda c: f'../../../ref/{c["auth_name"].lower()}/{c["code"]}'
+        urls.append(f'ref/{c["auth_name"].lower()}/{c["code"]}/')
 
         axes = {}
         if crs:
@@ -314,6 +326,17 @@ def main():
             except:
                 proj4 = ''
             dump_f(f'{dir}', 'proj4.txt', proj4)
+
+
+    url_prefix = 'https://spatialreference.org/'
+    sitemap_str = '<?xml version="1.0" encoding="utf-8"?>\n'
+    sitemap_str += '<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">\n'
+    for url in urls:
+        sitemap_str += url_to_xml(url_prefix, url)
+    sitemap_str += '</urlset>\n'
+
+    with open(sitemap_file, 'w') as sitemap:
+        sitemap.write(sitemap_str)
 
     return 0
 
