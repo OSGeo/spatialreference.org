@@ -53,7 +53,13 @@
             </li>
             {%- endif %}
             {%- if deprecated %}
-            <li class="darkred"><b>Deprecated!</b></li>
+            <li><b class="darkred">Deprecated!</b>
+                {%- if non_deprecated %}
+                See {%- for nodep in non_deprecated|sort(attribute='text') %}
+<a href="{{ nodep.url }}" title="{{ nodep.title}}">{{ nodep.text }}</a>{{ ", " if not loop.last else "" }}
+                {%- endfor %} instead.
+                {%- endif %}
+            </li>
             {%- endif %}
         </ul>
         {%- endif %}
