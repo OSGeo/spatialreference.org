@@ -159,6 +159,14 @@ def url_to_xml(prefix, file):
     str += f'    </url>\n'
     return str
 
+def non_deprecated_info(to_authority, crss):
+    auth_name = to_authority[0]
+    code = to_authority[1]
+    entry = next(x for x in crss if x['auth_name'] == auth_name and x['code'] == code)
+    return {'url': f'../../{auth_name.lower()}/{code}',
+            'text': f'{auth_name}:{code}',
+            'title': entry['name'] if entry else '',}
+
 def main():
     dest_dir = os.getenv('DEST_DIR', '.')
     g = Generator()
@@ -269,6 +277,7 @@ def main():
                'area_name': aou[4] if aou else 'Unknown',
                'epsg_scaped_name': epsg_scaped_name,
                'deprecated': c.get("deprecated", False),
+               'non_deprecated': [non_deprecated_info(x.to_authority(), crss) for x in crs.get_non_deprecated()],
                'crs_type': c.get("type", '--'),
                'bounds': bounds,
                'bounds_map': bounds if aou and auth_lowercase[0:3] != 'iau' else None,
