@@ -1,0 +1,10 @@
+VERTCRS["ETRF93",
+    VDATUM["European_Terrestrial_Reference_Frame_1993"],
+    CS[vertical,1],
+        AXIS["ellipsoidal height (h)",up,
+            LENGTHUNIT["metre",1]],
+    USAGE[
+        SCOPE["Not known."],
+        AREA["Europe - onshore and offshore - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N."],
+        BBOX[32.88,-16.1,84.73,40.18]],
+    ID["ESRI",115825]]

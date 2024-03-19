@@ -1,0 +1,1 @@
++proj=omerc +no_uoff +lat_0=4 +lonc=102.25 +alpha=-36.974209437118 +gamma=-36.869897645844 +k=0.99984 +x_0=804670.24 +y_0=0 +ellps=evrst69 +units=m +no_defs +type=crs

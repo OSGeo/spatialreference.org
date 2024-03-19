@@ -1,0 +1,1 @@
+GEOGCS["GCS_Wallis_MOP_1976_geographiques_dms",DATUM["D_WALLIS-UVEA_MOP1976",SPHEROID["International_1924",6378388.0,297.0]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]]
