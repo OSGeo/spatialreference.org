@@ -76,6 +76,8 @@ function filter_data(data, search, authority) {
         search = '';
     }
     let s = search.toUpperCase().split(' ');
+    let no_s = s.filter(elem => elem[0] == '-').map(elem => elem.substring(1));
+    s = s.filter(elem => elem[0] != '-');
 
     let auth_code = [null, s.length ? s[0] : null];
     if (s.length == 1 && s[0].split(':').length == 2) {
@@ -91,6 +93,9 @@ function filter_data(data, search, authority) {
             outlier = s2.find(elem => !name.includes(elem));
         }
         let valid = (outlier == undefined);
+        if (no_s.find(elem => name.includes(elem)) != undefined) {
+            valid = false
+        }
 
         if (!isNaN(auth_code[1]) && d.code === auth_code[1] && (!auth_code[0] || d.auth_name === auth_code[0])) {
             // filter by code or auth:code
