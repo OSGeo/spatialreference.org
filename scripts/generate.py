@@ -159,13 +159,43 @@ def url_to_xml(prefix, file):
     str += f'    </url>\n'
     return str
 
-def non_deprecated_info(to_authority, crss):
-    auth_name = to_authority[0]
-    code = to_authority[1]
+def authority_to_link_dict(to_authority, crss):
+    auth_name, code = to_authority
     entry = next(x for x in crss if x['auth_name'] == auth_name and x['code'] == code)
     return {'url': f'../../{auth_name.lower()}/{code}',
             'text': f'{auth_name}:{code}',
             'title': entry['name'] if entry else '',}
+
+def compute_base_crs(crs, type, crss):
+    if type in ['GEOGRAPHIC_2D_CRS', 'GEOGRAPHIC_3D_CRS']:
+        res_type = pyproj.enums.PJType.GEOGRAPHIC_3D_CRS if type == 'GEOGRAPHIC_2D_CRS' else pyproj.enums.PJType.GEOCENTRIC_CRS
+        auth_code = crs.datum.to_json_dict()['id']
+        id_auth = auth_code['authority']
+        id_code = str(auth_code['code'])
+        try:
+            r = pyproj.database.query_geodetic_crs_from_datum(id_auth, id_auth, id_code, res_type)
+        except Exception as e:
+            print('*** Exception', e)
+        if len(r) == 1:
+            r[0].to_authority()
+            return authority_to_link_dict(r[0].to_authority(), crss)
+        elif len(r) > 1:
+            try:
+                a = next(x for x in r if x.name == crs.name)
+                return authority_to_link_dict(a.to_authority(), crss)
+            except:
+                print('*** Datum: more than 1 no matching name', id_auth, id_code, crs, crs.name, [x.name for x in r])
+    if type in ['PROJECTED_CRS']:
+        return authority_to_link_dict(crs.source_crs.to_authority(), crss)
+    else:
+        return None
+
+def compute_compound_crs(crs, type, crss):
+    if type == 'COMPOUND_CRS':
+        horizontal, vertical = crs.sub_crs_list
+        return {'horizontal': authority_to_link_dict(horizontal.to_authority(), crss),
+                'vertical':  authority_to_link_dict(vertical.to_authority(), crss)}
+    return None
 
 def main():
     dest_dir = os.getenv('DEST_DIR', '.')
@@ -249,6 +279,8 @@ def main():
         urls.append(f'ref/{c["auth_name"].lower()}/{c["code"]}/')
 
         axes = {}
+        base_crs = {}
+        compound = {}
         if crs:
             projjson = crs.to_json(pretty=False)
             try:
@@ -266,6 +298,8 @@ def main():
                     axes['abbr'] = ','.join([x['abbreviation'] for x in axes_arr])
                     units = [x['unit']['name'] if 'name' in x['unit'] else x['unit'] for x in axes_arr]
                     axes['units'] = units[0] if all(e == units[0] for e in units) else ', '.join(units)
+                base_crs = compute_base_crs(crs, c.get("type", ''), crss)
+                compound = compute_compound_crs(crs, c.get("type", ''), crss)
             except:
                 pass
 
@@ -277,7 +311,9 @@ def main():
                'area_name': aou[4] if aou else 'Unknown',
                'epsg_scaped_name': epsg_scaped_name,
                'deprecated': c.get("deprecated", False),
-               'non_deprecated': [non_deprecated_info(x.to_authority(), crss) for x in crs.get_non_deprecated()],
+               'non_deprecated': [authority_to_link_dict(x.to_authority(), crss) for x in crs.get_non_deprecated()],
+               'base_crs': base_crs,
+               'compound': compound,
                'crs_type': c.get("type", '--'),
                'bounds': bounds,
                'bounds_map': bounds if aou and auth_lowercase[0:3] != 'iau' else None,
