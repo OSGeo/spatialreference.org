@@ -78,6 +78,10 @@ padding: 10px;
     color: grey;
 }
 
+.type_abbr {
+    color: darksalmon;
+}
+
 .about_items {
     color: darkolivegreen;
 }

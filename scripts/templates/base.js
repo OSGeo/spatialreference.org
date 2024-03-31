@@ -24,6 +24,27 @@ function makeRectangle (area_of_use, color) {
     return L.rectangle(bounds, {color: color});
 }
 
+function type_abbr(type) {
+    if (type == 'PROJECTED_CRS') {
+        return 'P';
+    } else if (type == 'GEOGRAPHIC_2D_CRS') {
+        return 'G2D';
+    } else if (type == 'GEOGRAPHIC_3D_CRS') {
+        return 'G3D';
+    } else if (type == 'GEOGRAPHIC_CRS') {
+        return 'G';
+    } else if (type == 'GEODETIC_CRS') {
+        return 'GD';
+    } else if (type == 'GEOCENTRIC_CRS') {
+        return 'GC';
+    } else if (type == 'VERTICAL_CRS') {
+        return 'V';
+    } else if (type == 'COMPOUND_CRS') {
+        return 'C';
+    }
+    return '';
+}
+
 function generate_entries(data, home_dir, from, number, container) {
     for (let i = from; i < from + number; i++) {
         if (i >= data.length)
@@ -36,6 +57,10 @@ function generate_entries(data, home_dir, from, number, container) {
         li.appendChild(a);
         name_broken = crs.name.replaceAll('_', '<wbr>_')
         li.innerHTML += `: ${name_broken}`;
+        const t = type_abbr(crs.type);
+        if (t) {
+            li.innerHTML += ` <small class="type_abbr" title="${crs.type}">[${t}]</small>`;
+        }
         if (crs.deprecated) {
             li.innerHTML += ' <span class="deprecated_in_list">(deprecated)</span>';
         }
