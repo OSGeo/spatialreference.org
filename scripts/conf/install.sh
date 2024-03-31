@@ -24,7 +24,7 @@ python3 -m venv $VIRTUAL_ENV
 
 # install pyproj
 python3 -m pip install -q --upgrade pip
-python3 -m pip install -q git+https://github.com/pyproj4/pyproj.git@$PYPROJ_VERSION
+python3 -m pip install -q git+https://github.com/jjimenezshaw/pyproj.git@$PYPROJ_VERSION
 # do not use this, it may include PROJ: python3.8 -m pip install pyproj==$PYPROJ_VERSION
 python3 -m pip install -q pygments
 python3 -m pip install -q jinja2
