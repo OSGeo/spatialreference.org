@@ -74,9 +74,9 @@ function update_pages_links(page, search, max_pages) {
         let prev = document.querySelectorAll(class_name);
         Array.from(prev).forEach(e => {
             if (!show) {
-                e.classList.add('hidden');
+                e.classList.add('is-disabled');
             } else {
-                e.classList.remove('hidden');
+                e.classList.remove('is-disabled');
                 e.href = `?page=${page_number}${s}`;
             }
         });
