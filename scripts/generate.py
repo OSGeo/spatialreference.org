@@ -160,33 +160,55 @@ def url_to_xml(prefix, file):
     return str
 
 def authority_to_link_dict(to_authority, crss):
-    auth_name, code = to_authority
-    entry = next(x for x in crss if x['auth_name'] == auth_name and x['code'] == code)
-    return {'url': f'../../{auth_name.lower()}/{code}',
-            'text': f'{auth_name}:{code}',
-            'title': entry['name'] if entry else '',}
+    try:
+        auth_name, code = to_authority
+        entry = next(x for x in crss if x['auth_name'] == auth_name and x['code'] == code)
+        return {'url': f'../../{auth_name.lower()}/{code}',
+                'text': f'{auth_name}:{code}',
+                'title': entry['name'] if entry else '',}
+    except:
+        pass
+    return None
 
-def compute_base_crs(crs, type, crss):
+def datum_metadata(crs, type):
+    crs_auth, crs_code = crs.to_authority()
+    datum_id = crs.datum.to_json_dict()['id']
+    datum_auth = datum_id['authority']
+    datum_code = str(datum_id['code'])
+    key = f'{datum_auth}:{datum_code}'
+    return {'key': key, 'datum_auth': datum_auth, 'datum_code': datum_code,
+            'crs_auth': crs_auth, 'crs_code': crs_code, 'crs_name': crs.name,
+            'crs_type': type}
+
+def compute_base_crs(crs, type, crss, map_datums):
     if type in ['GEOGRAPHIC_2D_CRS', 'GEOGRAPHIC_3D_CRS']:
-        res_type = pyproj.enums.PJType.GEOGRAPHIC_3D_CRS if type == 'GEOGRAPHIC_2D_CRS' else pyproj.enums.PJType.GEOCENTRIC_CRS
-        auth_code = crs.datum.to_json_dict()['id']
-        id_auth = auth_code['authority']
-        id_code = str(auth_code['code'])
-        try:
-            r = pyproj.database.query_geodetic_crs_from_datum(id_auth, id_auth, id_code, res_type)
-        except Exception as e:
-            print('*** Exception', e)
+        conn_type = 'GEOGRAPHIC_3D_CRS' if type == 'GEOGRAPHIC_2D_CRS' else 'GEOCENTRIC_CRS'
+        md = datum_metadata(crs, type)
+        entry = map_datums.get(md['key'], None)
+        if not entry:
+            return None
+        r = [x for x in entry if x['crs_type'] == conn_type and x['crs_auth'] == md['datum_auth']]
+        if len(r) == 0:
+            r = [x for x in entry if x['crs_type'] == conn_type]
+
         if len(r) == 1:
-            r[0].to_authority()
-            return authority_to_link_dict(r[0].to_authority(), crss)
+            base_crs = r[0]
         elif len(r) > 1:
             try:
-                a = next(x for x in r if x.name == crs.name)
-                return authority_to_link_dict(a.to_authority(), crss)
+                base_crs = next(x for x in r if x['crs_name'] == crs.name)
             except:
-                print('*** Datum: more than 1 no matching name', id_auth, id_code, crs, crs.name, [x.name for x in r])
+                print('*** Datum: more than 1 no matching name. - Datum', md['datum_auth'], md['datum_code'],
+                      '- CRS', crs, crs.name, type, '- Names', [x['crs_name'] for x in r])
+                return None
+        else:
+            return None
+
+        base_to_authority = (base_crs['crs_auth'], base_crs['crs_code'])
+        return authority_to_link_dict(base_to_authority, crss)
+
     if type in ['PROJECTED_CRS']:
-        return authority_to_link_dict(crs.source_crs.to_authority(), crss)
+        base = crs.source_crs
+        return authority_to_link_dict(base.to_authority(), crss) if base else None
     else:
         return None
 
@@ -244,6 +266,16 @@ def main():
     total = len(crss)
     sys.stdout.write(f'Processing {total} CRSs:\n')
 
+    types_to_datums = ['GEOGRAPHIC_2D_CRS', 'GEOGRAPHIC_3D_CRS', 'GEOCENTRIC_CRS']
+    map_datums = {}
+    for id, c in enumerate(crss):
+        type = c.get("type", '')
+        if type not in types_to_datums or c.get("deprecated", 0):
+            continue
+        crs = pyproj.CRS.from_authority(auth_name=c["auth_name"], code=c["code"])
+        md = datum_metadata(crs, type)
+        map_datums.setdefault(md['key'], []).append(md)
+
     for id, c in enumerate(crss):
         count += 1
         if count > 100:
@@ -298,9 +330,10 @@ def main():
                     axes['abbr'] = ','.join([x['abbreviation'] for x in axes_arr])
                     units = [x['unit']['name'] if 'name' in x['unit'] else x['unit'] for x in axes_arr]
                     axes['units'] = units[0] if all(e == units[0] for e in units) else ', '.join(units)
-                base_crs = compute_base_crs(crs, c.get("type", ''), crss)
+                base_crs = compute_base_crs(crs, c.get("type", ''), crss, map_datums)
                 compound = compute_compound_crs(crs, c.get("type", ''), crss)
-            except:
+            except Exception as e:
+                print (crs.name, crs.to_authority(), e)
                 pass
 
         mapping = mapping_ref | {
