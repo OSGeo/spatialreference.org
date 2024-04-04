@@ -24,6 +24,27 @@ function makeRectangle (area_of_use, color) {
     return L.rectangle(bounds, {color: color});
 }
 
+function type_abbr(type) {
+    if (type == 'PROJECTED_CRS') {
+        return 'P';
+    } else if (type == 'GEOGRAPHIC_2D_CRS') {
+        return 'G2D';
+    } else if (type == 'GEOGRAPHIC_3D_CRS') {
+        return 'G3D';
+    } else if (type == 'GEOGRAPHIC_CRS') {
+        return 'G';
+    } else if (type == 'GEODETIC_CRS') {
+        return 'GD';
+    } else if (type == 'GEOCENTRIC_CRS') {
+        return 'GC';
+    } else if (type == 'VERTICAL_CRS') {
+        return 'V';
+    } else if (type == 'COMPOUND_CRS') {
+        return 'C';
+    }
+    return '';
+}
+
 function generate_entries(data, home_dir, from, number, container) {
     for (let i = from; i < from + number; i++) {
         if (i >= data.length)
@@ -36,6 +57,10 @@ function generate_entries(data, home_dir, from, number, container) {
         li.appendChild(a);
         name_broken = crs.name.replaceAll('_', '<wbr>_')
         li.innerHTML += `: ${name_broken}`;
+        const t = type_abbr(crs.type);
+        if (t) {
+            li.innerHTML += ` <small class="type_abbr" title="${crs.type}">[${t}]</small>`;
+        }
         if (crs.deprecated) {
             li.innerHTML += ' <span class="deprecated_in_list">(deprecated)</span>';
         }
@@ -49,9 +74,9 @@ function update_pages_links(page, search, max_pages) {
         let prev = document.querySelectorAll(class_name);
         Array.from(prev).forEach(e => {
             if (!show) {
-                e.classList.add('hidden');
+                e.classList.add('is-disabled');
             } else {
-                e.classList.remove('hidden');
+                e.classList.remove('is-disabled');
                 e.href = `?page=${page_number}${s}`;
             }
         });
@@ -76,6 +101,8 @@ function filter_data(data, search, authority) {
         search = '';
     }
     let s = search.toUpperCase().split(' ');
+    let no_s = s.filter(elem => elem[0] == '-').map(elem => elem.substring(1));
+    s = s.filter(elem => elem[0] != '-');
 
     let auth_code = [null, s.length ? s[0] : null];
     if (s.length == 1 && s[0].split(':').length == 2) {
@@ -91,6 +118,9 @@ function filter_data(data, search, authority) {
             outlier = s2.find(elem => !name.includes(elem));
         }
         let valid = (outlier == undefined);
+        if (no_s.find(elem => name.includes(elem)) != undefined) {
+            valid = false
+        }
 
         if (!isNaN(auth_code[1]) && d.code === auth_code[1] && (!auth_code[0] || d.auth_name === auth_code[0])) {
             // filter by code or auth:code

@@ -78,8 +78,20 @@ padding: 10px;
     color: grey;
 }
 
+.type_abbr {
+    color: darksalmon;
+}
+
 .about_items {
     color: darkolivegreen;
+}
+
+.is-disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+    color: currentColor;
+    pointer-events: none;
+    text-decoration: none;
 }
 
 .list-box {

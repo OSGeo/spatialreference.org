@@ -52,6 +52,15 @@
                 <b title="Unit of Measurement">UoM</b>: {{ axes.units }}.
             </li>
             {%- endif %}
+            {%- if base_crs %}
+            <li><b>Base CRS</b>: <a href="{{ base_crs.url }}" title="{{ base_crs.title}}">{{ base_crs.text }}</a></li>
+            {%- endif %}
+            {%- if compound %}
+            <li>
+                <b>Horizontal CRS</b>: <a href="{{ compound.horizontal.url }}" title="{{ compound.horizontal.title}}">{{ compound.horizontal.text }}</a>
+                <b>Vertical CRS</b>: <a href="{{ compound.vertical.url }}" title="{{ compound.vertical.title}}">{{ compound.vertical.text }}</a>
+            </li>
+            {%- endif %}
             {%- if deprecated %}
             <li><b class="darkred">Deprecated!</b>
                 {%- if non_deprecated %}
