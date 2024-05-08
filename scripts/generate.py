@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 
 import json
-import os, shutil, sys
+import os, shutil, sys, io
 import re
 from itertools import groupby
 from pathlib import Path
 from datetime import date
 from string import Template
 from urllib.parse import quote_plus
+from contextlib import redirect_stdout
 
 from pygments.lexer import RegexLexer
 from pygments.token import *
@@ -241,11 +242,16 @@ def main():
     }
 
 
+
     mapping = make_mapping('.') | count_authorities
     g.render('index.tmpl', f'{dest_dir}', mapping)
     urls.append('')
     g.render('about.tmpl', f'{dest_dir}/about.html', mapping)
     urls.append('about.html')
+    with redirect_stdout(io.StringIO()) as f:
+        pyproj.show_versions()
+    mapping['versions'] = f.getvalue()
+    g.render('versions.tmpl', f'{dest_dir}/versions.html', mapping)
     mapping = make_mapping('..')
     g.render('ref.tmpl', f'{dest_dir}/ref/', mapping)
     urls.append('ref/')

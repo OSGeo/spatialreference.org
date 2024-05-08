@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+    {% include 'sections/head.tmpl' %}
+    <title>Versions -- Spatial Reference</title>
+</head>
+
+<body>
+    <div id="header">
+        {% include 'sections/header.tmpl' %}
+        <div id="header_title">
+            Source versions
+        </div>
+    </div>
+    <div id="searchbox">
+        {% include 'sections/searchbox.tmpl' %}
+    </div>
+
+    <div id="navbar">
+        {% include 'sections/navbar.tmpl' %}
+    </div>
+
+    <div id="content">
+        <p>This site is generated with <a href="https://proj.org/">PROJ</a> {{ proj_version }}
+        and <a href="https://pyproj4.github.io/pyproj">pyproj</a>.
+        These are the versions of the libraries used in the process,
+        and the versions of the Databases involved, like <a href="https://epsg.org/">EPSG</a>, ESRI or IGNF.
+        </p>
+        <br>
+        <hr>
+        <pre class="versions">{{ versions }}</pre>
+        <hr>
+
+    </div>
+    <div id="footer">
+        {% include 'sections/footer.tmpl' %}
+    </div>
+</body>
+</html>
