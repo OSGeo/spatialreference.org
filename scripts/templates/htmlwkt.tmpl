@@ -3,6 +3,8 @@
 <head>
     {% include 'sections/head.tmpl' %}
     <title>{{ authority }}:{{ code }}{{ wkt_type }} -- Spatial Reference</title>
+    <meta name="keywords" content="{{ authority }}, {{ code }}, {{ 'WKT2' if wkt_type else 'WKT' }}, coordinate system, srs, crs" >
+    <meta name="description" content="{{ authority }}:{{ code }} {{ 'WKT2' if wkt_type else 'WKT' }}" >
 </head>
 
 <body>
