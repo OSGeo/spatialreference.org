@@ -1,0 +1,1 @@
++proj=longlat +ellps=krass +no_defs +type=crs

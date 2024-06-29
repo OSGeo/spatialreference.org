@@ -1,0 +1,1 @@
++proj=omerc +lat_0=40 +lat_1=0 +lon_1=0 +lat_2=60 +lon_2=60 +k=1 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs +type=crs

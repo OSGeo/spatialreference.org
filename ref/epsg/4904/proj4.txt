@@ -1,0 +1,1 @@
++proj=longlat +ellps=bessel +pm=lisbon +no_defs +type=crs
