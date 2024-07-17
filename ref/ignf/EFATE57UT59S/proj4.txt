@@ -1,0 +1,1 @@
++proj=utm +zone=59 +south +ellps=intl +units=m +no_defs +type=crs

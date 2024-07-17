@@ -1,0 +1,1 @@
+GEOGCS["GCS_SRGI2013",DATUM["Sistem_Referensi_Geospasial_Indonesia_2013",SPHEROID["WGS_1984",6378137.0,298.257223563]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],VERTCS["INAGeoid2020_v2_height",VDATUM["Indonesian_Geoid_2020_version_2"],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",1.0],UNIT["Meter",1.0]]
