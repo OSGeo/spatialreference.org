@@ -33,7 +33,7 @@
             View <a href="https://epsg.org/crs_{{ code }}/{{ epsg_scaped_name }}.html" target="_blank">
             EPSG.org definition for EPSG:{{ code }}</a> |
           {%- endif %}
-            <a href="http://www.google.com/search?q={{ encoded_name }}" target="_blank">Google it</a>
+            <a href="https://www.google.com/search?q={{ encoded_name }}" target="_blank">Google it</a>
         </p>
         {%- if error %}
         <div class="crs_error"><b>ERROR!</b> {{ error|e|replace(",", ",<wbr>") }}</div>

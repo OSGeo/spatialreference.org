@@ -23,7 +23,13 @@
     </div>
 
     <div id="content">
+        <h2>What is SpatialReference.org?</h2>
+        SpatialReference.org is a comprehensive online resource dedicated to providing detailed information and reference materials on spatial coordinate reference systems.<br>
+        This website is essential for geospatial professionals, GIS developers, and cartographers, providing an extensive database of spatial reference systems used globally.<br>
+        The website allows users to search, access, and implement various spatial references easily, offering standardized formats like Well-Known Text (WKT) or PROJJSON. A wide array of coordinate reference systems, such as WGS 84 or NAD83(2011) geographic systems, thousands of projected systems (like UTM zones), as well as vertical systems like NAVD88 are supported.<br>
+        One of the key features of SpatialReference.org is its support for EPSG codes. EPSG, which stands for European Petroleum Survey Group, is a widely recognized standard for defining coordinate reference systems. These codes simplify the identification and use of spatial reference systems in various geospatial applications.
         <h2>Find your references in any number of formats!</h2>
+        This page shows a list of the Coordinate Reference Systems included in <a href="https://proj.org">PROJ</a>.
         <ul>
             <li>See Existing EPSG Codes: <a href="{{ home_dir }}/ref/epsg/4326/">4326</a>, <a href="{{ home_dir }}/ref/epsg/6492/">6492</a></li>
             <li>Browse a list:
@@ -49,7 +55,7 @@
             </li>
             {% endif %}
         </ul>
-        <p>Last Revised {{ last_revised }}</p>
+        <p>Last revised in {{ last_revised }}</p>
     </div>
     <div id="footer">
         {% include 'sections/footer.tmpl' %} - Code implementation inspired by <a href="https://crs-explorer.proj.org">crs-explorer.proj.org</a>
