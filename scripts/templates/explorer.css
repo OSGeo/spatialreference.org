@@ -1,0 +1,124 @@
+#mapid {
+    height: 400px;
+    width: 800px;
+    max-width: 80%;
+}
+.sticky {
+    position: sticky;
+    top: 0;
+}
+.circle {
+    background-color: #3388ff; /* For browsers that do not support gradients */
+    background-image: radial-gradient(#ccdaed, #3388ff, #3388ff);
+    border-radius: 50%; /* make the div a circular shape */
+    cursor: ne-resize !important;
+}
+
+label {
+    white-space: nowrap;
+}
+
+.loader-text {
+    color: darkred;
+}
+#message {
+    color: darkred;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.order {
+    color: #CCC;
+    font-size: 0.84em;
+    padding-left: 0.5em;
+}
+.tab {
+
+}
+.tab-line:nth-of-type(2n) .tab-cell {
+    background: #EEEEEE;
+}
+.tab-line {
+    text-wrap: nowrap;
+    display: table-row;
+}
+.tab-header .tab-cell {
+    color: whitesmoke;
+    background-color: darkslategray;
+    cursor: pointer;
+    text-align: center;
+}
+.tab-cell {
+    border-width: 1px;
+    border-style: solid;
+    border-color: white;
+    display: inline-block;
+    padding-left: 0.25em;
+    padding-right: 0.25em;
+    vertical-align: inherit;
+    unicode-bidi: isolate;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.tab-code {
+    width: 7em;
+}
+.tab-name {
+    width: 20em;
+}
+.tab-area {
+    width: 21em;
+    cursor: pointer;
+}
+.tab-type {
+    width: 8em;
+}
+.tab-type-short {
+    width: 3em;
+    display: none;
+}
+.tab-deprecated {
+    width: 2em;
+}
+
+@media only screen and (max-width: 960px) {
+    .tab-area {
+        width: 15em;
+    }
+}
+@media only screen and (max-width: 860px) {
+    .tab-type {
+        display: none;
+    }
+    .tab-type-short {
+        display: inline-block;
+    }
+    .tab-deprecated-hide {
+        display: none;
+    }
+}
+@media only screen and (max-width: 720px) {
+    .tab-name {
+        width: 15em;
+    }
+    .tab-area {
+        width: 10em;
+    }
+}
+@media only screen and (max-width: 580px) {
+    .tab-name {
+        width: 12em;
+    }
+    .tab-area {
+        width: 6em;
+    }
+}
+@media only screen and (max-width: 440px) {
+    .tab-area {
+        display: none;
+    }
+}
