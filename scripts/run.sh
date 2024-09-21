@@ -6,6 +6,7 @@ PROJ_VERSION=9.5.0
 PYPROJ_VERSION=7aab7d91e14230d846f74c418810652859d3c69d # fixing 3.6.1
 LAST_REVISED=2024
 TAG="crs-explorer:$PROJ_VERSION"
+STOP_COUNTER="${1:-0}"
 
 # prepare destination
 DIRNAME=`dirname $(readlink -f $0)`
@@ -16,7 +17,7 @@ test "$(ls -A $DIRNAME/dist/)" && rm -r $DIRNAME/dist/*
 docker build --pull --build-arg VERSION=$PROJ_VERSION --build-arg PYPROJ_VERSION=$PYPROJ_VERSION --tag $TAG $DIRNAME
 
 # execute container
-docker run --user $(id -u):$(id -g) -e LAST_REVISED=$LAST_REVISED -e PROJ_VERSION=$PROJ_VERSION --rm -v "$DIRNAME/dist:/home/dist" $TAG
+docker run --user $(id -u):$(id -g) -e STOP_COUNTER=$STOP_COUNTER -e LAST_REVISED=$LAST_REVISED -e PROJ_VERSION=$PROJ_VERSION --rm -v "$DIRNAME/dist:/home/dist" $TAG
 
 # done
 echo .

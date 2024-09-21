@@ -229,7 +229,8 @@ def main():
     crss = make_crslist(dest_dir)
 
     # copy some literal files, not modified
-    for literal in ['base.js', 'base.css', 'sr_logo.jpg', 'favicon.ico', 'tests.html', 'robots.txt']:
+    for literal in ['base.js', 'explorer.js', 'base.css', 'explorer.css',
+                     'sr_logo.jpg', 'favicon.ico', 'tests.html', 'robots.txt']:
         shutil.copy(f'./templates/{literal}', dest_dir)
 
     authorities = {
@@ -248,6 +249,8 @@ def main():
     urls.append('')
     g.render('about.tmpl', f'{dest_dir}/about.html', mapping)
     urls.append('about.html')
+    g.render('explorer.tmpl', f'{dest_dir}/explorer.html', mapping)
+    urls.append('explorer.html')
     with redirect_stdout(io.StringIO()) as f:
         pyproj.show_versions()
     mapping['versions'] = f.getvalue()
@@ -269,6 +272,7 @@ def main():
     mapping_wkt = make_mapping('../../..')
 
     count = 0
+    stop_count = int(os.getenv('STOP_COUNTER', '0'))
     total = len(crss)
     sys.stdout.write(f'Processing {total} CRSs:\n')
 
@@ -284,8 +288,9 @@ def main():
 
     for id, c in enumerate(crss):
         count += 1
-        if count > 100:
-            pass #break
+        if count == stop_count:
+            print(f'Stopped before running crs # {count}')
+            break
         if count % int(total/100) == 0 or total == count:
             sys.stdout.write('\r')
             sys.stdout.write("[%-20s] %d%%" % ('='*int(count/total*20), int(count/total*100)))

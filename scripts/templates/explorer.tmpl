@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+    {% include 'sections/head.tmpl' %}
+    <link rel="stylesheet" href="{{ home_dir }}/explorer.css">
+    <title>Home -- Explorer</title>
+    {% include 'sections/leaflet.tmpl' %}
+</head>
+
+<body>
+    <div id="header">
+        {% include 'sections/header.tmpl' %}
+        <div id="header_title">
+            Explorer
+        </div>
+    </div>
+
+    <div id="navbar">
+        {% include 'sections/navbar.tmpl' %}
+    </div>
+
+    <div id="content">
+        <div id="mapcont">
+            <div id="mapid">
+            </div>
+        </div>
+        <div>
+            <label title="Keeps the map always visible"><input type="checkbox" id="stickyCb">Sticky map</label> |
+            Click the map to select a location. Drag the point for an area. <button type="button" id="delete">Delete location</button> <span id="location"></span>
+        </div>
+        <div id="filters">
+            <span id="activeTypes">
+                <label><input type="checkbox" class="crstype" id="PROJECTED_CRS">Projected</label>
+                <label><input type="checkbox" class="crstype" id="GEOGRAPHIC_2D_CRS">Geographic 2D</label>
+                <label><input type="checkbox" class="crstype" id="GEOGRAPHIC_3D_CRS">Geographic 3D</label>
+                <label><input type="checkbox" class="crstype" id="GEOCENTRIC_CRS">Geocentric</label>
+                <label><input type="checkbox" class="crstype" id="GEODETIC_CRS">Geodetic</label>
+                <label><input type="checkbox" class="crstype" id="VERTICAL_CRS">Vertical</label>
+                <label><input type="checkbox" class="crstype" id="COMPOUND_CRS">Compound</label>
+                <label><input type="checkbox" class="crstype" id="CRS">Other</label>
+            </span>  |
+            <label title="Do not show CRS with area of use longitude from -180 to 180">
+                <input type="checkbox" id="ignoreWorld">Ignore World</label>
+            <label title="Display also deprecated systems">
+                <input type="checkbox" id="allowDeprecated">Allow deprecated</label>
+        </div>
+        <div id="authorities">
+            <label><input type="checkbox" class="crsauth" id="EPSG">EPSG</label>
+            <label><input type="checkbox" class="crsauth" id="ESRI">ESRI</label>
+            <label><input type="checkbox" class="crsauth" id="IAU_2015">IAU_2015</label>
+            <label><input type="checkbox" class="crsauth" id="IGNF">IGNF</label>
+            <label><input type="checkbox" class="crsauth" id="NKG">NKG</label>
+            <label><input type="checkbox" class="crsauth" id="OGC">OGC</label>
+        </div>
+        <br>
+        <div id="searcher">
+            <form>Filter by name: <input type="text" name="value" tabindex="1">
+                <button type="submit">Search</button>
+                <a href="javascript:toggleInfo()" title="Show/hide info" target="_self">&lt; ℹ &gt;</a>
+                <span id="activeSearch" class="hide"> Active filter: <span id="activeSearchTxt"></span></span>
+                <div class="hidden" id="search_info">
+                    <ul>
+                        <li>Write many words to do an "and" search on the "Name" column</li>
+                        <li>Use | (pipe) separator to do an "or" search</li>
+                        <li>Enclose the terms in quotes (") to search them together</li>
+                        <li>Add a dash (-) to exclude an expression</li>
+                        <li>Search is case insensitive</li>
+                        <li>Numbers only are considered also as ids, and searched as codes</li>
+                        <li>examples: <br> <code>"sachusetts mainland" -(ftUS)</code> <br> <code>4326 | 32632 | CH1903 LV95</code></li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+        <div id="message" class="hidden">
+            <br> &gt;&gt; Select CRS types to display, like Projected, Geographic 2D or Vertical &lt;&lt;
+        </div>
+        <br>
+        <h3>Selected &amp; Filtered Systems (<span class="loader-text">Loading…</span><span class="counter-text hidden"></span>)</h3>
+        <div id="tab-container">
+        </div>
+    </div>
+    <div id="footer">
+        {% include 'sections/footer.tmpl' %} - Code implementation inspired by <a href="https://crs-explorer.proj.org">crs-explorer.proj.org</a>
+    </div>
+
+    <script src="{{ home_dir }}/base.js"></script>
+    <script src="{{ home_dir }}/explorer.js"></script>
+    <script>
+        init_explorer("{{ home_dir }}")
+    </script>
+</body>
