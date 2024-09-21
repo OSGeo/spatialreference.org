@@ -1,0 +1,1 @@
+VERTCS["NAVD88_depth_(ftUS)",VDATUM["North_American_Vertical_Datum_1988"],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",-1.0],UNIT["US survey foot",0.304800609601219]]

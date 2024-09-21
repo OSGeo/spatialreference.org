@@ -1,0 +1,1 @@
+VERTCS["EGM2008_Geoid",VDATUM["EGM2008_Geoid"],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",1.0],UNIT["Meter",1.0]]

@@ -1,0 +1,10 @@
+VERTCRS["DVR90",
+    VDATUM["Dansk_Vertikal_Reference_1990"],
+    CS[vertical,1],
+        AXIS["gravity-related height (H)",up,
+            LENGTHUNIT["metre",1]],
+    USAGE[
+        SCOPE["Not known."],
+        AREA["Denmark - onshore."],
+        BBOX[54.5,7.98,57.81,15.28]],
+    ID["ESRI",105701]]
