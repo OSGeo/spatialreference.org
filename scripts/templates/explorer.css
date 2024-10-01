@@ -29,6 +29,15 @@ label {
     font-weight: bold;
 }
 
+.narrower , .wider {
+    cursor: cell;
+    font-size: 0.95em;
+    float: left;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+    color: #EEE;
+}
+
 .order {
     color: #CCC;
     font-size: 0.84em;
@@ -68,7 +77,7 @@ label {
     width: 7em;
 }
 .tab-name {
-    width: 20em;
+    width: 25em;
 }
 .tab-area {
     width: 21em;
@@ -85,6 +94,11 @@ label {
     width: 2em;
 }
 
+@media only screen and (max-width: 1000px) {
+    .tab-name {
+        width: 20em;
+    }
+}
 @media only screen and (max-width: 960px) {
     .tab-area {
         width: 15em;
