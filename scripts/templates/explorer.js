@@ -282,8 +282,8 @@ function makeTab() {
         let d = div(['tab-cell', className], header, name, title);
         d.innerHTML += '<span class="order"></span>';
         if (name == 'Name') {
-            d.innerHTML = '<span class="narrower" title="Narrower column">&#9666;</span>' +
-                        ' <span class="wider" title="Wider column">&#9656;</span>' +
+            d.innerHTML = '<span class="narrower" title="Narrower column">&lt;</span>' +
+                        ' <span class="wider" title="Wider column">&gt;</span>' +
                         d.innerHTML;
         }
         d.addEventListener('click', ev => {
