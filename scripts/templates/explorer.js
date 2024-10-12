@@ -297,7 +297,10 @@ function makeTab() {
     function changeWidth(ev, increase) {
         let style = document.getElementById('overwrite-tab-name-width');
         if (style.innerHTML.length == 0) {
-            style.innerHTML = '.tab-name { width:25em; }';
+            const fontSize = parseFloat(getComputedStyle(document.querySelector('html'))['font-size']);
+            const widthPx = header.querySelector('.tab-name').offsetWidth;
+            const widthEm = Math.round(widthPx/fontSize);
+            style.innerHTML = `.tab-name { width:${widthEm}em; }`;
         }
         let m = style.innerHTML.match(/\d+/);
         if (m) {
