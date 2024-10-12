@@ -1,0 +1,1 @@
+GEOGCS["GCS_KK-IRF",DATUM["Copenhagen_Commune_Intermediate_Datum",SPHEROID["Danish_1876",6377019.27,300.0]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]]

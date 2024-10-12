@@ -1,0 +1,1 @@
++proj=longlat +ellps=NWL9D +no_defs +type=crs
