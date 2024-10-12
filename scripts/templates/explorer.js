@@ -281,6 +281,11 @@ function makeTab() {
      ['tab-deprecated', 'Depr', 'Deprecated']].forEach(([className, name, title], idx) => {
         let d = div(['tab-cell', className], header, name, title);
         d.innerHTML += '<span class="order"></span>';
+        if (name == 'Name') {
+            d.innerHTML = '<span class="narrower" title="Narrower column">&lt;</span>' +
+                        ' <span class="wider" title="Wider column">&gt;</span>' +
+                        d.innerHTML;
+        }
         d.addEventListener('click', ev => {
             const id = idx + 1;
             const col = header.getAttribute('data-order-column');
@@ -288,6 +293,32 @@ function makeTab() {
             slowTask(applyOrderInTab);
         });
     });
+
+    function changeWidth(ev, increase) {
+        let style = document.getElementById('overwrite-tab-name-width');
+        if (style.innerHTML.length == 0) {
+            const fontSize = parseFloat(getComputedStyle(document.querySelector('html'))['font-size']);
+            const widthPx = header.querySelector('.tab-name').offsetWidth;
+            const widthEm = Math.round(widthPx/fontSize);
+            style.innerHTML = `.tab-name { width:${widthEm}em; }`;
+        }
+        let m = style.innerHTML.match(/\d+/);
+        if (m) {
+            let num = parseInt(m[0])
+            num += increase ? 1 : -1;
+            if (num > 10 && num < 100)
+                style.innerHTML = `.tab-name { width:${num}em; }`;
+        }
+    }
+
+    tab.querySelector('.wider').addEventListener('click', ev => {
+        ev.stopPropagation();
+        changeWidth(ev, true);
+    })
+    tab.querySelector('.narrower').addEventListener('click', ev => {
+        ev.stopPropagation();
+        changeWidth(ev, false);
+    })
 
     header.setAttribute('data-order-column', 1);
     return tab;
