@@ -1,0 +1,1 @@
+GEOGCS["GCS_International_1967",DATUM["D_International_1967",SPHEROID["International_1967",6378160.0,298.25]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]]

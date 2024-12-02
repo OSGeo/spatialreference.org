@@ -1,0 +1,1 @@
++proj=longlat +ellps=WGS72 +vunits=m +no_defs +type=crs

@@ -1,0 +1,1 @@
++proj=mod_krovak +lat_0=49.5 +lon_0=42.5 +alpha=30.2881397222222 +k=0.9999 +x_0=5000000 +y_0=5000000 +ellps=bessel +pm=ferro +units=m +no_defs +type=crs

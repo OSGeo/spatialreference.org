@@ -1,0 +1,1 @@
+GEOGCS["GCS_Pandora_2015_-_Sphere_Ocentric",DATUM["D_Pandora_2015_-_Sphere",SPHEROID["Pandora_2015_-_Sphere",40600.0,0.0]],PRIMEM["Reference_Meridian",0.0],UNIT["Degree",0.0174532925199433]]

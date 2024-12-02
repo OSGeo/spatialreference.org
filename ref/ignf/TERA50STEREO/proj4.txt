@@ -1,0 +1,1 @@
++proj=stere +lat_0=-90 +lon_0=140 +k=0.960272946 +x_0=300000 +y_0=-2299363.482 +ellps=intl +units=m +no_defs +type=crs
