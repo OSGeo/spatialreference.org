@@ -1,0 +1,1 @@
+VERTCS["Tutuila_1962_height",VDATUM["Tutuila_Vertical_Datum_of_1962"],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",1.0],UNIT["Meter",1.0]]
