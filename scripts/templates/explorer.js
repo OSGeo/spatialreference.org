@@ -411,6 +411,7 @@ function clickOnTab(ev) {
     let auth, code;
     [auth, code] = auth_code.split(':',2)
     let data = _data.find(crs => crs.code == code && crs.auth_name == auth);
+    if (!data) return;
     let area = data.area_of_use;
     if (!_areasInMap.hasOwnProperty('layergroup')) {
         _areasInMap.layergroup = L.layerGroup({interactive: false}).addTo(_map);
