@@ -146,8 +146,8 @@ function init_ref(home_dir, authority) {
         data = filter_data(data, params.search, authority);
         document.querySelector('#found').innerText = data.length;
         if(params.search && params.search.trim()) {
-            document.querySelector('#searched_text').innerHTML =
-            ` from search: <pre style="display: inline;">${params.search}</pre>`;
+            document.querySelector('#searched_text_span').classList.remove("hidden")
+            document.querySelector('#searched_text').textContent = params.search;
 
             const forms = document.querySelectorAll('form')
             Array.from(forms).forEach(form => form.elements['search'].value = params.search);

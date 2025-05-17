@@ -31,11 +31,12 @@
             <input type="submit" value="Search">
         </form>
 
+        <p>
         {%- if authority is defined and authority %}
-        <p>You are only searching <b>{{ authority }}</b> references. <a class="only_searching" href="{{ home_dir }}/ref/?&amp;search=">Search All</a>?</p>
+        You are only searching <b>{{ authority }}</b> references. <a class="only_searching" href="{{ home_dir }}/ref/?&amp;search=">Search All</a>?
         {%- endif %}
-
-        <p>Entries found: <span id="found"></span> <span id="searched_text"></span></p>
+        </p>
+        <div>Entries found: <span id="found"></span><span id="searched_text_span" class="hidden"> from search: <pre style="display: inline;" id="searched_text"></pre></span></div>
         <div class="outer-wrapper">
             <div class="inner-flexbox">
                 <div id="list1">
