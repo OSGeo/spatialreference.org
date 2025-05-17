@@ -1,0 +1,1 @@
++proj=omerc +no_uoff +lat_0=57 +lonc=-133.666666666667 +alpha=-36.8698976458333 +gamma=-36.8698976458333 +k=0.9999 +x_0=5000000.00000001 +y_0=-5000000.00000001 +datum=NAD83 +units=us-ft +no_defs +type=crs

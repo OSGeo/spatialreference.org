@@ -1,0 +1,1 @@
++proj=utm +zone=13 +datum=NAD83 +units=m +no_defs +type=crs
