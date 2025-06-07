@@ -1,0 +1,1 @@
+GEOGCS["Epimetheus_2015",DATUM["Epimetheus_2015",SPHEROID["Epimetheus_2015",58200.0,0.0]],PRIMEM["Reference_Meridian",0.0],UNIT["Degree",0.0174532925199433]]
