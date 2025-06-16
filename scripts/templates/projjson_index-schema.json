@@ -12,11 +12,11 @@
     "properties": {
       "auth_name": {
         "type": "string",
-        "description": "CRS authority name, e.g. EPSG, ESRI, and OGC"
+        "description": "CRS authority name, e.g. EPSG, ESRI, OGC"
       },
       "code": {
         "type": "string",
-        "description": "CRS code, e.g. '4326' or '2181', and 'CRS84'"
+        "description": "CRS code, e.g. 4326, 2181, CRS84"
       },
       "link": {
         "type": "string",
