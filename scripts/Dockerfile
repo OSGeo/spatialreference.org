@@ -1,5 +1,5 @@
 ARG VERSION
-FROM ghcr.io/osgeo/proj:${VERSION:-9.5.0}
+FROM --platform=linux/amd64 ghcr.io/osgeo/proj:${VERSION:-9.5.0}
 
 ARG PYPROJ_VERSION 3.3.0
 ENV PYPROJ_VERSION=$PYPROJ_VERSION
