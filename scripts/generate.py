@@ -74,6 +74,32 @@ def add_frozen_crss(crss):
             crss = [*crss, *dom]
     return crss
 
+def make_projjson_index(dest_dir):
+    dest_file = f'{dest_dir}/projjson_index.json'
+
+    pyproj.show_versions()
+
+    crs_list = pyproj.database.query_crs_info(allow_deprecated=True)
+
+    crss = sorted(
+        [crs._asdict() for crs in crs_list if crs.area_of_use],
+        key=lambda d: d['auth_name'] + d['code'].zfill(7)
+    )
+
+    crss = add_frozen_crss(crss)
+
+    crss2 = [
+        {
+            "auth_name": crs["auth_name"],
+            "code": crs["code"],
+            "link": f"./ref/{crs['auth_name'].lower()}/{crs['code'].lower()}/projjson.json",
+        }
+        for crs in crss
+    ]
+
+    with open(dest_file, 'w') as fp:
+        json.dump(crss2, fp, indent=2)
+
 def make_crslist(dest_dir):
     dest_file = f'{dest_dir}/crslist.json'
 
@@ -226,6 +252,7 @@ def main():
     sitemap_file = f'{dest_dir}/sitemap.xml'
     urls = []
 
+    make_projjson_index(dest_dir)
     crss = make_crslist(dest_dir)
 
     # copy some literal files, not modified
