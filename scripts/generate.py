@@ -74,6 +74,23 @@ def add_frozen_crss(crss):
             crss = [*crss, *dom]
     return crss
 
+def make_projjson_index(dest_dir, crss):
+    dest_file = f'{dest_dir}/projjson_index.json'
+
+    index = [
+        {
+            "auth_name": crs["auth_name"],
+            "code": crs["code"],
+            "link": f"./ref/{crs['auth_name'].lower()}/{crs['code']}/projjson.json",
+        }
+        for crs in crss
+    ]
+
+    with open(dest_file, 'w') as fp:
+        json.dump(index, fp, indent=2)
+
+    shutil.copy(f'./templates/projjson_index-schema.json', f'{dest_dir}/projjson_index-schema.json')
+
 def make_crslist(dest_dir):
     dest_file = f'{dest_dir}/crslist.json'
 
@@ -227,6 +244,7 @@ def main():
     urls = []
 
     crss = make_crslist(dest_dir)
+    make_projjson_index(dest_dir, crss)
 
     # copy some literal files, not modified
     for literal in ['base.js', 'explorer.js', 'base.css', 'explorer.css',
