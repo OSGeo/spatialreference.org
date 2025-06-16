@@ -81,7 +81,7 @@ def make_projjson_index(dest_dir, crss):
         {
             "auth_name": crs["auth_name"],
             "code": crs["code"],
-            "link": f"./ref/{crs['auth_name'].lower()}/{crs['code'].lower()}/projjson.json",
+            "link": f"./ref/{crs['auth_name'].lower()}/{crs['code']}/projjson.json",
         }
         for crs in crss
     ]
