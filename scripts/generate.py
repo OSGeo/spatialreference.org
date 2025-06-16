@@ -241,8 +241,8 @@ def main():
     sitemap_file = f'{dest_dir}/sitemap.xml'
     urls = []
 
-    make_projjson_index(dest_dir)
     crss = make_crslist(dest_dir)
+    make_projjson_index(dest_dir, crss)
 
     # copy some literal files, not modified
     for literal in ['base.js', 'explorer.js', 'base.css', 'explorer.css',
