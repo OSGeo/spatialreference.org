@@ -89,8 +89,6 @@ def make_projjson_index(dest_dir, crss):
     with open(dest_file, 'w') as fp:
         json.dump(index, fp, indent=2)
 
-    shutil.copy(f'./templates/projjson_index-schema.json', f'{dest_dir}/projjson_index-schema.json')
-
 def make_crslist(dest_dir):
     dest_file = f'{dest_dir}/crslist.json'
 
@@ -248,7 +246,8 @@ def main():
 
     # copy some literal files, not modified
     for literal in ['base.js', 'explorer.js', 'base.css', 'explorer.css',
-                     'sr_logo.jpg', 'favicon.ico', 'tests.html', 'robots.txt']:
+                     'sr_logo.jpg', 'favicon.ico', 'tests.html', 'robots.txt',
+                     'projjson_index-schema.json']:
         shutil.copy(f'./templates/{literal}', dest_dir)
 
     authorities = {
