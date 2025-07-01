@@ -14,7 +14,7 @@ mkdir -p $DIRNAME/dist
 test "$(ls -A $DIRNAME/dist/)" && rm -r $DIRNAME/dist/*
 
 # build container
-docker build --pull --build-arg VERSION=$PROJ_VERSION --build-arg PYPROJ_VERSION=$PYPROJ_VERSION --tag $TAG $DIRNAME
+docker build --pull --platform=linux/amd64 --build-arg VERSION=$PROJ_VERSION --build-arg PYPROJ_VERSION=$PYPROJ_VERSION --tag $TAG $DIRNAME
 
 # execute container
 docker run --user $(id -u):$(id -g) -e STOP_COUNTER=$STOP_COUNTER -e LAST_REVISED=$LAST_REVISED -e PROJ_VERSION=$PROJ_VERSION --rm -v "$DIRNAME/dist:/home/dist" $TAG
