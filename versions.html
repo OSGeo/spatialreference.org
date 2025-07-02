@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./base.css">
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <title>Versions -- Spatial Reference</title>
+    <meta name="keywords" content="epsg, esri, iau, ignf, nkg, ogc, coordinate system, srs, crs" >
+    <meta name="description" content="Spatial Reference catalog of coordinate reference systems" >
+</head>
+
+<body>
+    <div id="header">
+        <div id="header_logo">
+            <a href="./"><img src="./sr_logo.jpg" alt="SR logo"></a>
+        </div>
+        <div id="header_title">
+            Source versions
+        </div>
+    </div>
+    <div id="searchbox">
+        <form action="./ref/">
+            <input type="text" name="search" value="">
+            <input type="submit" value="Search">
+        </form>
+    </div>
+
+    <div id="navbar">
+        <div id="navlinks">
+            <a href="./">Home</a> |
+            <a href="./ref/">List all references</a> |
+            <a href="./explorer.html">Explorer</a>
+        </div>
+    </div>
+
+    <div id="content">
+        <p>This site is generated with <a href="https://proj.org/">PROJ</a> 9.6.2
+        and <a href="https://pyproj4.github.io/pyproj">pyproj</a>.
+        These are the versions of the libraries used in the process,
+        and the versions of the Databases involved, like <a href="https://epsg.org/">EPSG</a>, ESRI or IGNF.
+        </p>
+        <br>
+        <hr>
+        <pre class="versions">pyproj info:
+    pyproj: 3.7.1
+PROJ (runtime): 9.6.2
+PROJ (compiled): 9.6.2
+  data dir: /usr/share/proj/
+user_data_dir: /tmp/proj
+PROJ DATA (recommended version): 1.22
+PROJ Database: 1.5
+EPSG Database: v12.013 [2025-05-26]
+ESRI Database: ArcGIS Pro 3.5 [2025-05-11]
+IGNF Database: 3.1.0 [2019-05-24]
+
+System:
+    python: 3.10.12 (main, May 27 2025, 17:12:29) [GCC 11.4.0]
+executable: /home/venv/bin/python3
+   machine: Linux-6.11.0-1015-azure-x86_64-with-glibc2.35
+
+Python deps:
+   certifi: 2025.6.15
+    Cython: None
+setuptools: 59.6.0
+       pip: 25.1.1
+</pre>
+        <hr>
+
+    </div>
+    <div id="footer">
+        <a href="./about.html">About</a> - Built on 2025-07-02 using
+        <a href="https://proj.org">PROJ</a> 9.6.2 (See detailed <a href="./versions.html">versions here</a>)
+    </div>
+</body>
+</html>

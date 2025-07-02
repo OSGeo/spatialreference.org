@@ -1,0 +1,1 @@
++proj=utm +zone=5 +datum=NAD27 +units=m +no_defs +type=crs
