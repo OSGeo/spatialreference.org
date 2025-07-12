@@ -1,0 +1,17 @@
+# `dependabot.yml` file with updates
+
+# Update manually "Insights -> Dependency Graph -> Dependabot" 
+
+version: 2
+updates:
+  # Configuration for Dockerfile
+  - package-ecosystem: "docker"
+    directory: "/scripts/"
+    schedule:
+      interval: "daily"
+  
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      # Check for updates to GitHub Actions every month
+      interval: "monthly"

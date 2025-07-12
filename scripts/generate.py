@@ -124,11 +124,11 @@ def make_crslist(dest_dir):
 
 def make_mapping(home_dir):
     today = date.today().isoformat()
+    proj_version = pyproj.database.get_database_metadata("PROJ.VERSION")
     mapping = {'home_dir': home_dir,
                'lang': 'en',
                'authority': None,
-               'last_revised': os.getenv('LAST_REVISED', '-missing-'),
-               'proj_version': os.getenv('PROJ_VERSION', '-missing-'),
+               'proj_version': proj_version,
                'built_date': today,}
     return mapping
 
