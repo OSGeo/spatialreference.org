@@ -1,0 +1,1 @@
+VERTCS["AHD_Tasmania",VDATUM["Australian_Height_Datum_Tasmania"],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",1.0],UNIT["Meter",1.0]]

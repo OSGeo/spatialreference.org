@@ -1,0 +1,1 @@
+VERTCS["BSCD2000_depth",VDATUM["Baltic_Sea_Chart_Datum_2000"],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",-1.0],UNIT["Meter",1.0]]
