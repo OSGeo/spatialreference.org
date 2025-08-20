@@ -1,0 +1,1 @@
+VERTCS["La_Gomera_height",VDATUM["La_Gomera"],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",1.0],UNIT["Meter",1.0]]

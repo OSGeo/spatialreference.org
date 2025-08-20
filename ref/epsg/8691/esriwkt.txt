@@ -1,0 +1,1 @@
+VERTCS["SRB_VRS12_height",VDATUM["Serbian_Vertical_Reference_System_2012"],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",1.0],UNIT["Meter",1.0]]
