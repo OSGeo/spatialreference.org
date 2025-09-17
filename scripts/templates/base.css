@@ -64,6 +64,10 @@ border-bottom: #ccc 1px solid;
 padding: 10px;
 }
 
+#osm_attribution {
+    font-size: 0.7em;
+}
+
 #footer {
 margin-top: 20px;
 border-top: 1px solid #eee;
