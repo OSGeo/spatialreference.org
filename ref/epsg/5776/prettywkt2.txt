@@ -1,0 +1,10 @@
+VERTCRS["NN54 height",
+    VDATUM["Norway Normal Null 1954"],
+    CS[vertical,1],
+        AXIS["gravity-related height (H)",up,
+            LENGTHUNIT["metre",1]],
+    USAGE[
+        SCOPE["Geodesy, engineering survey, topographic mapping."],
+        AREA["Norway - onshore."],
+        BBOX[57.9,4.39,71.24,31.32]],
+    ID["EPSG",5776]]

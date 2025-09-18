@@ -1,0 +1,1 @@
++proj=aea +lat_0=45.568977 +lon_0=-84.455955 +lat_1=42.122774 +lat_2=49.01518 +x_0=1000000 +y_0=1000000 +datum=NAD83 +units=m +no_defs +type=crs

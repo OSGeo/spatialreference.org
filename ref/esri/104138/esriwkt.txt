@@ -1,0 +1,1 @@
+GEOGCS["GCS_Old_Hawaiian_Intl_1924",DATUM["D_Old_Hawaiian_Intl_1924",SPHEROID["International_1924",6378388.0,297.0]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]]

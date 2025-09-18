@@ -1,0 +1,1 @@
+VERTCS["COH88_2025_NAVD88_height",VDATUM["Derived_California_Orthometric_Heights_of_1988_epoch_2025"],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",1.0],UNIT["Meter",1.0]]
