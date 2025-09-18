@@ -57,8 +57,11 @@
         </ul>
         <a href="{{ home_dir }}/explorer.html" title="Open Explorer">
             <p>Click the Map to open the Explorer</p>
-            <img src="https://a.tile.openstreetmap.org/0/0/0.png">
+            <img src="https://a.tile.openstreetmap.org/0/0/0.png" alt="World map">
         </a>
+        <div id="osm_attribution">
+        Map &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors
+        </div>
     </div>
     <div id="footer">
         {% include 'sections/footer.tmpl' %} - Code implementation inspired by <a href="https://crs-explorer.proj.org">crs-explorer.proj.org</a>
