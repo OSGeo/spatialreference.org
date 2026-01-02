@@ -1,0 +1,1 @@
+VERTCS["Saba",DATUM["D_Saba",SPHEROID["International_1924",6378388.0,297.0]],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",1.0],UNIT["Meter",1.0]]

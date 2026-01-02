@@ -1,0 +1,1 @@
+GEOGCS["Sint_Eustatius",DATUM["Sint_Eustatius",SPHEROID["International_1924",6378388.0,297.0]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],VERTCS["Sint_Eustatius_height",VDATUM["Sint_Eustatius_Vertical_Datum"],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",1.0],UNIT["Meter",1.0]]

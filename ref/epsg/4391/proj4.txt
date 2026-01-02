@@ -1,0 +1,1 @@
++proj=cass +lat_0=2.71228333333333 +lon_0=101.941166666667 +x_0=-242.005 +y_0=-948.547 +ellps=evrst48 +units=m +no_defs +type=crs

@@ -1,0 +1,20 @@
+GEOGCRS["ETRF89",
+    DYNAMIC[
+        FRAMEEPOCH[1989]],
+    DATUM["European Terrestrial Reference Frame 1989",
+        ELLIPSOID["GRS 1980",6378137,298.257222101,
+            LENGTHUNIT["metre",1]]],
+    PRIMEM["Greenwich",0,
+        ANGLEUNIT["degree",0.0174532925199433]],
+    CS[ellipsoidal,2],
+        AXIS["geodetic latitude (Lat)",north,
+            ORDER[1],
+            ANGLEUNIT["degree",0.0174532925199433]],
+        AXIS["geodetic longitude (Lon)",east,
+            ORDER[2],
+            ANGLEUNIT["degree",0.0174532925199433]],
+    USAGE[
+        SCOPE["Geodesy."],
+        AREA["Europe - onshore and offshore - ETRF extent - approximately 16°W to 33°E and 33°N to 84°N."],
+        BBOX[33.26,-16.1,84.73,38.01]],
+    ID["EPSG",9059]]

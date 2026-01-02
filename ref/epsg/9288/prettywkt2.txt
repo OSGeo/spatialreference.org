@@ -1,0 +1,10 @@
+VERTCRS["MSL NL depth",
+    VDATUM["Mean Sea Level Netherlands"],
+    CS[vertical,1],
+        AXIS["depth (D)",down,
+            LENGTHUNIT["metre",1]],
+    USAGE[
+        SCOPE["Hydrography, drilling, offshore engineering."],
+        AREA["Netherlands - offshore North Sea and nearshore."],
+        BBOX[51.32,2.53,55.77,7.21]],
+    ID["EPSG",9288]]

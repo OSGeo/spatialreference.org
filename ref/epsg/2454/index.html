@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../base.css">
+    <link rel="icon" type="image/x-icon" href="../../../favicon.ico">
+    <title>EPSG:2454 JGD2000 / Japan Plane Rectangular CS XII -- Spatial Reference</title>
+    <meta name="keywords" content="EPSG, 2454, JGD2000 / Japan Plane Rectangular CS XII, coordinate system, srs, crs" >
+    <meta name="description" content="EPSG:2454 JGD2000 / Japan Plane Rectangular CS XII - spatial reference system" >
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div id="header_logo">
+            <a href="../../../"><img src="../../../sr_logo.jpg" alt="SR logo"></a>
+        </div>
+        <div id="header_title">
+            EPSG:<wbr>2454
+        </div>
+    </div>
+    <div id="searchbox">
+        <form action="../../../ref/">
+            <input type="text" name="search" value="">
+            <input type="submit" value="Search">
+        </form>
+    </div>
+
+    <div id="navbar">
+        <div id="navlinks">
+            <a href="../../../">Home</a> |
+            <a href="../../../ref/">List all references</a> |
+            <a href="../../../explorer.html">Explorer</a>
+        </div>
+    </div>
+
+    <div id="content">
+        Previous: <a href="../../../ref/epsg/2453">EPSG:2453 : JGD2000 / Japan Plane Rectangular CS XI</a> | Next: <a href="../../../ref/epsg/2455">EPSG:2455 : JGD2000 / Japan Plane Rectangular CS XIII</a>
+
+        <h1>EPSG:2454</h1>
+        <h2>JGD2000 / Japan Plane Rectangular CS XII</h2>
+        <p>
+            View <a href="https://epsg.org/crs_2454/JGD2000-Japan-Plane-Rectangular-CS-XII.html" target="_blank">
+            EPSG.org definition for EPSG:2454</a> |
+            <a href="https://www.google.com/search?q=JGD2000+%2F+Japan+Plane+Rectangular+CS+XII" target="_blank">Google it</a>
+        </p>
+        <ul>
+            <li><b>Type</b>: PROJECTED_CRS</li>
+            <li><b>WGS84 Bounds</b>: 140.89, 42.15, 143.61, 45.54</li>
+            <li><b>Scope</b>: Cadastre, engineering survey, topographic mapping (large and medium scale).</li>
+            <li><b>Area</b>: Japan - onshore - Hokkaido between approximately 141°E and 143°E - Sapporo city; Asahikawa city; Wakkanai city; Rumoi city; Bibai city; Yubari city; Iwamizawa city; Tomakomai city; Muroran city; Shibetsu city; Nayoro city; Ashibetsu city; Akabira city; Mikasa city; Takikawa city; Sunagawa city; Ebetsu city; Chitose city; Utashinai city; Fukagawa city; Monbetsu city; Furano city; Noboribetsu city; Eniwa city; Ishikari-shicho; Monbetsu-gun of Abashiri-shicho; Kamikawa-shicho; Soya-shicho; Hidaka-shicho; Iburi-shicho (except Usu-gun and Abuta-gun); Sorachi-shicho; Rumoi-shicho.</li>
+            <li><b>Projection method name</b>: Transverse Mercator</li>
+            <li><b title="Info got from PROJJSON">Axes</b>: Northing, Easting
+                    <span title="Abbreviation">(X,Y)</span>.
+                <b>Directions</b>: north, east.
+                <b title="Unit of Measurement">UoM</b>: metre.
+            </li>
+            <li><b>Base CRS</b>: <a href="../../epsg/4612" title="JGD2000">EPSG:4612</a></li>
+        </ul>
+
+        <div class="list-box">
+        <ul>
+            <li>WKT-1
+                <ul>
+                    <li><a href="wkt.html">Well Known Text as HTML</a></li>
+                    <li><a href="prettywkt.txt">Human-Readable OGC WKT</a></li>
+                    <li><a href="ogcwkt">OGC WKT</a></li>
+                </ul>
+            </li>
+            <li>WKT-2
+                <ul>
+                    <li><a href="wkt2.html">Well Known Text 2 as HTML</a></li>
+                    <li><a href="prettywkt2.txt">Human-Readable OGC WKT2</a></li>
+                </ul>
+            </li>
+            <li><a href="esriwkt.txt">ESRI WKT</a></li>
+            <li><a href="#" onclick="download_prj('2454.prj', 'esriwkt.txt')" title="Download as PRJ file from ESRI">.PRJ</a></li>
+            <li><a href="projjson.json" title="PROJJSON">JSON</a></li>
+            <li><a href="proj4.txt">Proj4</a> (deprecated format)</li>
+        </ul>
+        </div>
+        <div id="map" class="map-container"></div>
+    </div>
+
+    <div id="footer">
+        <a href="../../../about.html">About</a> - Built on 2026-01-02 using
+        <a href="https://proj.org">PROJ</a> 9.7.1 (See detailed <a href="../../../versions.html">versions here</a>)
+    </div>
+
+    <script src="../../../base.js"></script>
+    <script>
+        init_map([140.89, 42.15, 143.61, 45.54])
+    </script>
+</body>
+</html>

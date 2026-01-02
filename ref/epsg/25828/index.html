@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../base.css">
+    <link rel="icon" type="image/x-icon" href="../../../favicon.ico">
+    <title>EPSG:25828 ETRS89 / UTM zone 28N -- Spatial Reference</title>
+    <meta name="keywords" content="EPSG, 25828, ETRS89 / UTM zone 28N, coordinate system, srs, crs" >
+    <meta name="description" content="EPSG:25828 ETRS89 / UTM zone 28N - spatial reference system" >
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div id="header_logo">
+            <a href="../../../"><img src="../../../sr_logo.jpg" alt="SR logo"></a>
+        </div>
+        <div id="header_title">
+            EPSG:<wbr>25828
+        </div>
+    </div>
+    <div id="searchbox">
+        <form action="../../../ref/">
+            <input type="text" name="search" value="">
+            <input type="submit" value="Search">
+        </form>
+    </div>
+
+    <div id="navbar">
+        <div id="navlinks">
+            <a href="../../../">Home</a> |
+            <a href="../../../ref/">List all references</a> |
+            <a href="../../../explorer.html">Explorer</a>
+        </div>
+    </div>
+
+    <div id="content">
+        Previous: <a href="../../../ref/epsg/25700">EPSG:25700 : Makassar (Jakarta) / NEIEZ</a> | Next: <a href="../../../ref/epsg/25829">EPSG:25829 : ETRS89 / UTM zone 29N</a>
+
+        <h1>EPSG:25828</h1>
+        <h2>ETRS89 / UTM zone 28N</h2>
+        <p>
+            View <a href="https://epsg.org/crs_25828/ETRS89-UTM-zone-28N.html" target="_blank">
+            EPSG.org definition for EPSG:25828</a> |
+            <a href="https://www.google.com/search?q=ETRS89+%2F+UTM+zone+28N" target="_blank">Google it</a>
+        </p>
+        <ul>
+            <li><b>Type</b>: PROJECTED_CRS</li>
+            <li><b>WGS84 Bounds</b>: -16.1, 34.93, -11.99, 72.44</li>
+            <li><b>Scope</b>: Pan-European conformal mapping at scales larger than 1:500,000, engineering survey and topographic mapping at all scales.</li>
+            <li><b>Area</b>: Europe between 18°W and 12°W: Faroe Islands - offshore; Ireland - offshore; Jan Mayen - offshore; Portugal - offshore mainland; Spain - offshore mainland; United Kingdom (UKCS) - offshore.</li>
+            <li><b>Projection method name</b>: Transverse Mercator</li>
+            <li><b title="Info got from PROJJSON">Axes</b>: Easting, Northing
+                    <span title="Abbreviation">(E,N)</span>.
+                <b>Directions</b>: east, north.
+                <b title="Unit of Measurement">UoM</b>: metre.
+            </li>
+            <li><b>Base CRS</b>: <a href="../../epsg/4258" title="ETRS89">EPSG:4258</a></li>
+        </ul>
+
+        <div class="list-box">
+        <ul>
+            <li>WKT-1
+                <ul>
+                    <li><a href="wkt.html">Well Known Text as HTML</a></li>
+                    <li><a href="prettywkt.txt">Human-Readable OGC WKT</a></li>
+                    <li><a href="ogcwkt">OGC WKT</a></li>
+                </ul>
+            </li>
+            <li>WKT-2
+                <ul>
+                    <li><a href="wkt2.html">Well Known Text 2 as HTML</a></li>
+                    <li><a href="prettywkt2.txt">Human-Readable OGC WKT2</a></li>
+                </ul>
+            </li>
+            <li><a href="esriwkt.txt">ESRI WKT</a></li>
+            <li><a href="#" onclick="download_prj('25828.prj', 'esriwkt.txt')" title="Download as PRJ file from ESRI">.PRJ</a></li>
+            <li><a href="projjson.json" title="PROJJSON">JSON</a></li>
+            <li><a href="proj4.txt">Proj4</a> (deprecated format)</li>
+        </ul>
+        </div>
+        <div id="map" class="map-container"></div>
+    </div>
+
+    <div id="footer">
+        <a href="../../../about.html">About</a> - Built on 2026-01-02 using
+        <a href="https://proj.org">PROJ</a> 9.7.1 (See detailed <a href="../../../versions.html">versions here</a>)
+    </div>
+
+    <script src="../../../base.js"></script>
+    <script>
+        init_map([-16.1, 34.93, -11.99, 72.44])
+    </script>
+</body>
+</html>

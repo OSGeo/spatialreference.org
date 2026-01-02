@@ -1,0 +1,1 @@
+VERTCS["REDNAP_height",VDATUM["Red_Espanola_de_Nivelacion_de_Alta_Precision"],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",1.0],UNIT["Meter",1.0]]

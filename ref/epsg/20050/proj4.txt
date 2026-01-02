@@ -1,0 +1,1 @@
++proj=omerc +lat_0=40.8333333333333 +lonc=-74 +alpha=58 +gamma=58 +k=0.99999 +x_0=457200 +y_0=457200 +ellps=GRS80 +units=ft +no_defs +type=crs

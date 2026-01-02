@@ -1,0 +1,1 @@
+GEOGCS["GCS_Bianca_2000",DATUM["D_Bianca_2000",SPHEROID["Bianca_2000_IAU_IAG",21000.0,0.0]],PRIMEM["Reference_Meridian",0.0],UNIT["Degree",0.0174532925199433]]

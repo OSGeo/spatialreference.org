@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./base.css">
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <link rel="stylesheet" href="./explorer.css">
+    <title>SRS Explorer -- Spatial Reference</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <style type="text/css" id="overwrite-tab-name-width"></style>
+</head>
+
+<body>
+    <div id="header">
+        <div id="header_logo">
+            <a href="./"><img src="./sr_logo.jpg" alt="SR logo"></a>
+        </div>
+        <div id="header_title">
+            Explorer
+        </div>
+    </div>
+
+    <div id="navbar">
+        <div id="navlinks">
+            <a href="./">Home</a> |
+            <a href="./ref/">List all references</a> |
+            <a href="./explorer.html">Explorer</a>
+        </div>
+    </div>
+
+    <div id="content">
+        <div id="mapcont">
+            <div id="mapid">
+            </div>
+        </div>
+        <div>
+            <label title="Keeps the map always visible"><input type="checkbox" id="stickyCb">Sticky map</label> |
+            Click the map to select a location. Drag the point for an area. <button type="button" id="delete">Delete location</button> <span id="location"></span>
+        </div>
+        <div id="filters">
+            <span id="activeTypes">
+                <label><input type="checkbox" class="crstype" id="PROJECTED_CRS">Projected</label>
+                <label><input type="checkbox" class="crstype" id="GEOGRAPHIC_2D_CRS">Geographic 2D</label>
+                <label><input type="checkbox" class="crstype" id="GEOGRAPHIC_3D_CRS">Geographic 3D</label>
+                <label><input type="checkbox" class="crstype" id="GEOCENTRIC_CRS">Geocentric</label>
+                <label><input type="checkbox" class="crstype" id="GEODETIC_CRS">Geodetic</label>
+                <label><input type="checkbox" class="crstype" id="VERTICAL_CRS">Vertical</label>
+                <label><input type="checkbox" class="crstype" id="COMPOUND_CRS">Compound</label>
+                <label><input type="checkbox" class="crstype" id="CRS">Other</label>
+            </span>  |
+            <label title="Do not show CRS with area of use longitude from -180 to 180">
+                <input type="checkbox" id="ignoreWorld">Ignore World</label>
+            <label title="Display also deprecated systems">
+                <input type="checkbox" id="allowDeprecated">Allow deprecated</label>
+        </div>
+        <div id="authorities">
+            <label><input type="checkbox" class="crsauth" id="EPSG">EPSG</label>
+            <label><input type="checkbox" class="crsauth" id="ESRI">ESRI</label>
+            <label><input type="checkbox" class="crsauth" id="IAU_2015">IAU_2015</label>
+            <label><input type="checkbox" class="crsauth" id="IGNF">IGNF</label>
+            <label><input type="checkbox" class="crsauth" id="NKG">NKG</label>
+            <label><input type="checkbox" class="crsauth" id="OGC">OGC</label>
+        </div>
+        <br>
+        <div id="searcher">
+            <form>Filter by name: <input type="text" name="value" tabindex="1">
+                <button type="submit">Search</button>
+                <a href="javascript:toggleInfo()" title="Show/hide info" target="_self">&lt; ℹ &gt;</a>
+                <span id="activeSearch" class="hide"> Active filter: <span id="activeSearchTxt"></span></span>
+                <div class="hidden" id="search_info">
+                    <ul>
+                        <li>Write many words to do an "and" search on the "Name" column</li>
+                        <li>Use | (pipe) separator to do an "or" search</li>
+                        <li>Enclose the terms in quotes (") to search them together</li>
+                        <li>Add a dash (-) to exclude an expression</li>
+                        <li>Search is case insensitive</li>
+                        <li>Numbers only are considered also as ids, and searched as codes</li>
+                        <li>examples: <br> <code>"sachusetts mainland" -(ftUS)</code> <br> <code>4326 | 32632 | CH1903 LV95</code></li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+        <div id="message" class="hidden">
+            <br> &gt;&gt; Select CRS types to display, like Projected, Geographic 2D or Vertical &lt;&lt;
+        </div>
+        <br>
+        <h3>Selected &amp; Filtered Systems (<span class="loader-text">Loading…</span><span class="counter-text hidden"></span>)</h3>
+        <div id="tab-container">
+        </div>
+    </div>
+    <div id="footer">
+        <a href="./about.html">About</a> - Built on 2026-01-02 using
+        <a href="https://proj.org">PROJ</a> 9.7.1 (See detailed <a href="./versions.html">versions here</a>) - Code implementation inspired by <a href="https://crs-explorer.proj.org">crs-explorer.proj.org</a>
+    </div>
+
+    <script src="./base.js"></script>
+    <script src="./explorer.js"></script>
+    <script>
+        init_explorer(".")
+    </script>
+</body>

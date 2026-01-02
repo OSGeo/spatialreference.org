@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./base.css">
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <title>Home -- Spatial Reference</title>
+    <meta name="keywords" content="epsg, esri, iau, ignf, nkg, ogc, coordinate system, srs, crs" >
+    <meta name="description" content="Spatial Reference catalog of coordinate reference systems" >
+</head>
+
+<body>
+    <div id="header">
+        <div id="header_logo">
+            <a href="./"><img src="./sr_logo.jpg" alt="SR logo"></a>
+        </div>
+        <div id="header_title">
+            Welcome
+        </div>
+    </div>
+    <div id="searchbox">
+        <form action="./ref/">
+            <input type="text" name="search" value="">
+            <input type="submit" value="Search">
+        </form>
+    </div>
+
+    <div id="navbar">
+        <div id="navlinks">
+            <a href="./">Home</a> |
+            <a href="./ref/">List all references</a> |
+            <a href="./explorer.html">Explorer</a>
+        </div>
+    </div>
+
+    <div id="content">
+        <h2>What is SpatialReference.org?</h2>
+        SpatialReference.org is a comprehensive online resource dedicated to providing detailed information and reference materials on spatial coordinate reference systems.<br>
+        This website is essential for geospatial professionals, GIS developers, and cartographers, providing an extensive database of spatial reference systems used globally.<br>
+        The website allows users to search, access, and implement various spatial references easily, offering standardized formats like Well-Known Text (WKT) or PROJJSON. A wide array of coordinate reference systems, such as WGS 84 or NAD83(2011) geographic systems, thousands of projected systems (like UTM zones), as well as vertical systems like NAVD88 are supported.<br>
+        One of the key features of SpatialReference.org is its support for EPSG codes. EPSG, which stands for European Petroleum Survey Group, is a widely recognized standard for defining coordinate reference systems. These codes simplify the identification and use of spatial reference systems in various geospatial applications.
+        <h2>Find your references in any number of formats!</h2>
+        This page shows a list of the Coordinate Reference Systems included in <a href="https://proj.org">PROJ</a>.
+        <ul>
+            <li>See Existing EPSG Codes: <a href="./ref/epsg/4326/">4326</a>, <a href="./ref/epsg/6492/">6492</a></li>
+            <li>Browse a list:
+                <ul>
+                    <li>7726 <a href="./ref/epsg/">EPSG</a> references</li>
+                    <li>2921 <a href="./ref/esri/">ESRI</a> references</li>
+                    <li>2201 <a href="./ref/iau_2015/">IAU:2015</a> references</li>
+                    <li>864 <a href="./ref/ignf/">IGNF</a> references</li>
+                    <li>2 <a href="./ref/nkg/">NKG</a> references</li>
+                    <li>4 <a href="./ref/ogc/">OGC</a> references</li>
+                </ul>
+            </li>
+
+        </ul>
+        <a href="./explorer.html" title="Open Explorer">
+            <p>Click the Map to open the Explorer</p>
+            <img src="https://a.tile.openstreetmap.org/0/0/0.png" alt="World map">
+        </a>
+        <div id="osm_attribution">
+        Map &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors
+        </div>
+    </div>
+    <div id="footer">
+        <a href="./about.html">About</a> - Built on 2026-01-02 using
+        <a href="https://proj.org">PROJ</a> 9.7.1 (See detailed <a href="./versions.html">versions here</a>) - Code implementation inspired by <a href="https://crs-explorer.proj.org">crs-explorer.proj.org</a>
+    </div>
+
+    <script src="./base.js"></script>
+</body>

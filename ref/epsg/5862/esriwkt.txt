@@ -1,0 +1,1 @@
+VERTCS["LLWLT_Depth",VDATUM["Lower_Low_Water_Large_Tide"],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",-1.0],UNIT["Meter",1.0]]

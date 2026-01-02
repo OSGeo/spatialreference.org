@@ -1,0 +1,1 @@
+LOCAL_CS["Santa Maria de Ipire",LOCAL_DATUM["Santa Maria de Ipire",32767],UNIT["Meter",1.0],AXIS["Northing",NORTH],AXIS["Easting",EAST]]

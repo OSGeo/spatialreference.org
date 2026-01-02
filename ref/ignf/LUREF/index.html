@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../base.css">
+    <link rel="icon" type="image/x-icon" href="../../../favicon.ico">
+    <title>IGNF:LUREF Nouvelle Triangulation Luxembourg cartesiennes -- Spatial Reference</title>
+    <meta name="keywords" content="IGNF, LUREF, Nouvelle Triangulation Luxembourg cartesiennes, coordinate system, srs, crs" >
+    <meta name="description" content="IGNF:LUREF Nouvelle Triangulation Luxembourg cartesiennes - spatial reference system" >
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div id="header_logo">
+            <a href="../../../"><img src="../../../sr_logo.jpg" alt="SR logo"></a>
+        </div>
+        <div id="header_title">
+            IGNF:<wbr>LUREF
+        </div>
+    </div>
+    <div id="searchbox">
+        <form action="../../../ref/">
+            <input type="text" name="search" value="">
+            <input type="submit" value="Search">
+        </form>
+    </div>
+
+    <div id="navbar">
+        <div id="navlinks">
+            <a href="../../../">Home</a> |
+            <a href="../../../ref/">List all references</a> |
+            <a href="../../../explorer.html">Explorer</a>
+        </div>
+    </div>
+
+    <div id="content">
+        Previous: <a href="../../../ref/ignf/LAMBE">IGNF:LAMBE : NTF Lambert II etendu</a> | Next: <a href="../../../ref/ignf/LURES">IGNF:LURES : Nouvelle Triangulation Luxembourg cartesiennes</a>
+
+        <h1>IGNF:LUREF</h1>
+        <h2>Nouvelle Triangulation Luxembourg cartesiennes</h2>
+        <p>
+            <a href="https://www.google.com/search?q=Nouvelle+Triangulation+Luxembourg+cartesiennes" target="_blank">Google it</a>
+        </p>
+        <ul>
+            <li><b>Type</b>: GEOCENTRIC_CRS</li>
+            <li><b>WGS84 Bounds</b>: 5.73, 49.45, 6.53, 50.18</li>
+            <li><b>Scope</b>: NATIONALE A CARACTERE LEGAL</li>
+            <li><b>Area</b>: LUXEMBOURG (pays_cid : 137)</li>
+            <li><b title="Info got from PROJJSON">Axes</b>: Geocentric X, Geocentric Y, Geocentric Z
+                    <span title="Abbreviation">(X,Y,Z)</span>.
+                <b>Directions</b>: geocentricX, geocentricY, geocentricZ.
+                <b title="Unit of Measurement">UoM</b>: metre.
+            </li>
+        </ul>
+
+        <div class="list-box">
+        <ul>
+            <li>WKT-1
+                <ul>
+                    <li><a href="wkt.html">Well Known Text as HTML</a></li>
+                    <li><a href="prettywkt.txt">Human-Readable OGC WKT</a></li>
+                    <li><a href="ogcwkt">OGC WKT</a></li>
+                </ul>
+            </li>
+            <li>WKT-2
+                <ul>
+                    <li><a href="wkt2.html">Well Known Text 2 as HTML</a></li>
+                    <li><a href="prettywkt2.txt">Human-Readable OGC WKT2</a></li>
+                </ul>
+            </li>
+            <li><a href="esriwkt.txt">ESRI WKT</a></li>
+            <li><a href="#" onclick="download_prj('LUREF.prj', 'esriwkt.txt')" title="Download as PRJ file from ESRI">.PRJ</a></li>
+            <li><a href="projjson.json" title="PROJJSON">JSON</a></li>
+            <li><a href="proj4.txt">Proj4</a> (deprecated format)</li>
+        </ul>
+        </div>
+        <div id="map" class="map-container"></div>
+    </div>
+
+    <div id="footer">
+        <a href="../../../about.html">About</a> - Built on 2026-01-02 using
+        <a href="https://proj.org">PROJ</a> 9.7.1 (See detailed <a href="../../../versions.html">versions here</a>)
+    </div>
+
+    <script src="../../../base.js"></script>
+    <script>
+        init_map([5.73, 49.45, 6.53, 50.18])
+    </script>
+</body>
+</html>

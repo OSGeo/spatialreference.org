@@ -1,0 +1,1 @@
++proj=lcc +lat_0=37.6666666666667 +lon_0=-78.5 +lat_1=39.2 +lat_2=38.0333333333333 +x_0=3500000.0001016 +y_0=2000000.0001016 +datum=NAD83 +units=us-ft +vunits=us-ft +no_defs +type=crs

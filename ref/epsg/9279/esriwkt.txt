@@ -1,0 +1,1 @@
+VERTCS["SA_LLD_height",VDATUM["South_Africa_Land_Levelling_Datum"],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",1.0],UNIT["Meter",1.0]]

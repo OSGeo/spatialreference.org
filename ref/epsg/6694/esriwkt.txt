@@ -1,0 +1,1 @@
+VERTCS["JGD2000_vertical_height",VDATUM["Japanese_Geodetic_Datum_2000_vertical"],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",1.0],UNIT["Meter",1.0]]

@@ -1,0 +1,1 @@
+VERTCS["Dansk_Normal_Nul",VDATUM["Dansk_Normal_Nul"],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",1.0],UNIT["Meter",1.0]]

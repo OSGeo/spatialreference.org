@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../base.css">
+    <link rel="icon" type="image/x-icon" href="../../../favicon.ico">
+    <title>EPSG:3662 NAD83(NSRS2007) / Tennessee (ftUS) -- Spatial Reference</title>
+    <meta name="keywords" content="EPSG, 3662, NAD83(NSRS2007) / Tennessee (ftUS), coordinate system, srs, crs" >
+    <meta name="description" content="EPSG:3662 NAD83(NSRS2007) / Tennessee (ftUS) - spatial reference system" >
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div id="header_logo">
+            <a href="../../../"><img src="../../../sr_logo.jpg" alt="SR logo"></a>
+        </div>
+        <div id="header_title">
+            EPSG:<wbr>3662
+        </div>
+    </div>
+    <div id="searchbox">
+        <form action="../../../ref/">
+            <input type="text" name="search" value="">
+            <input type="submit" value="Search">
+        </form>
+    </div>
+
+    <div id="navbar">
+        <div id="navlinks">
+            <a href="../../../">Home</a> |
+            <a href="../../../ref/">List all references</a> |
+            <a href="../../../explorer.html">Explorer</a>
+        </div>
+    </div>
+
+    <div id="content">
+        Previous: <a href="../../../ref/epsg/3661">EPSG:3661 : NAD83(NSRS2007) / Tennessee</a> | Next: <a href="../../../ref/epsg/3663">EPSG:3663 : NAD83(NSRS2007) / Texas Central</a>
+
+        <h1>EPSG:3662</h1>
+        <h2>NAD83(NSRS2007) / Tennessee (ftUS)</h2>
+        <p>
+            View <a href="https://epsg.org/crs_3662/NAD83-NSRS2007-Tennessee-ftUS-.html" target="_blank">
+            EPSG.org definition for EPSG:3662</a> |
+            <a href="https://www.google.com/search?q=NAD83%28NSRS2007%29+%2F+Tennessee+%28ftUS%29" target="_blank">Google it</a>
+        </p>
+        <ul>
+            <li><b>Type</b>: PROJECTED_CRS</li>
+            <li><b>WGS84 Bounds</b>: -90.31, 34.98, -81.65, 36.68</li>
+            <li><b>Scope</b>: Engineering survey, topographic mapping.</li>
+            <li><b>Area</b>: United States (USA) - Tennessee - counties of Anderson; Bedford; Benton; Bledsoe; Blount; Bradley; Campbell; Cannon; Carroll; Carter; Cheatham; Chester; Claiborne; Clay; Cocke; Coffee; Crockett; Cumberland; Davidson; De Kalb; Decatur; Dickson; Dyer; Fayette; Fentress; Franklin; Gibson; Giles; Grainger; Greene; Grundy; Hamblen; Hamilton; Hancock; Hardeman; Hardin; Hawkins; Haywood; Henderson; Henry; Hickman; Houston; Humphreys; Jackson; Jefferson; Johnson; Knox; Lake; Lauderdale; Lawrence; Lewis; Lincoln; Loudon; Macon; Madison; Marion; Marshall; Maury; McMinn; McNairy; Meigs; Monroe; Montgomery; Moore; Morgan; Obion; Overton; Perry; Pickett; Polk; Putnam; Rhea; Roane; Robertson; Rutherford; Scott; Sequatchie; Sevier; Shelby; Smith; Stewart; Sullivan; Sumner; Tipton; Trousdale; Unicoi; Union; Van Buren; Warren; Washington; Wayne; Weakley; White; Williamson; Wilson.</li>
+            <li><b>Projection method name</b>: Lambert Conic Conformal (2SP)</li>
+            <li><b title="Info got from PROJJSON">Axes</b>: Easting, Northing
+                    <span title="Abbreviation">(X,Y)</span>.
+                <b>Directions</b>: east, north.
+                <b title="Unit of Measurement">UoM</b>: US survey foot.
+            </li>
+            <li><b>Base CRS</b>: <a href="../../epsg/4759" title="NAD83(NSRS2007)">EPSG:4759</a></li>
+        </ul>
+
+        <div class="list-box">
+        <ul>
+            <li>WKT-1
+                <ul>
+                    <li><a href="wkt.html">Well Known Text as HTML</a></li>
+                    <li><a href="prettywkt.txt">Human-Readable OGC WKT</a></li>
+                    <li><a href="ogcwkt">OGC WKT</a></li>
+                </ul>
+            </li>
+            <li>WKT-2
+                <ul>
+                    <li><a href="wkt2.html">Well Known Text 2 as HTML</a></li>
+                    <li><a href="prettywkt2.txt">Human-Readable OGC WKT2</a></li>
+                </ul>
+            </li>
+            <li><a href="esriwkt.txt">ESRI WKT</a></li>
+            <li><a href="#" onclick="download_prj('3662.prj', 'esriwkt.txt')" title="Download as PRJ file from ESRI">.PRJ</a></li>
+            <li><a href="projjson.json" title="PROJJSON">JSON</a></li>
+            <li><a href="proj4.txt">Proj4</a> (deprecated format)</li>
+        </ul>
+        </div>
+        <div id="map" class="map-container"></div>
+    </div>
+
+    <div id="footer">
+        <a href="../../../about.html">About</a> - Built on 2026-01-02 using
+        <a href="https://proj.org">PROJ</a> 9.7.1 (See detailed <a href="../../../versions.html">versions here</a>)
+    </div>
+
+    <script src="../../../base.js"></script>
+    <script>
+        init_map([-90.31, 34.98, -81.65, 36.68])
+    </script>
+</body>
+</html>

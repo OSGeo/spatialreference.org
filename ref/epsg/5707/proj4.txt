@@ -1,0 +1,1 @@
++proj=lcc +lat_1=49.5 +lat_0=49.5 +lon_0=0 +k_0=0.999877341 +x_0=600000 +y_0=1200000 +ellps=clrk80ign +pm=paris +units=m +vunits=m +no_defs +type=crs

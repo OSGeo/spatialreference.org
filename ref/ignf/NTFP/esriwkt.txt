@@ -1,0 +1,1 @@
+GEOGCS["GCS_NTF_geographiques_Paris_gr",DATUM["Nouvelle_Triangulation_Francaise_(Paris)",SPHEROID["Clarke_1880_IGN",6378249.2,293.466021293627]],PRIMEM["Paris",2.33722917],UNIT["Grad",0.0157079632679489]]

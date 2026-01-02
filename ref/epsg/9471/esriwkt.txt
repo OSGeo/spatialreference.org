@@ -1,0 +1,1 @@
+VERTCS["INAGeoid2020_height",VDATUM["Indonesian_Geoid_2020"],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",1.0],UNIT["Meter",1.0]]

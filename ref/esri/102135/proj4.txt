@@ -1,0 +1,1 @@
++proj=utm +zone=35 +a=6377492.018 +rf=299.1528128 +units=m +no_defs +type=crs

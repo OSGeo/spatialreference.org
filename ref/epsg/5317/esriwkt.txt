@@ -1,0 +1,1 @@
+VERTCS["FVR09_height",VDATUM["Faroe_Islands_Vertical_Reference_2009"],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",1.0],UNIT["Meter",1.0]]

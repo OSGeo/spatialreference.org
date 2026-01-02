@@ -1,0 +1,1 @@
+GEOGCS["BES2020_Saba",DATUM["BES2020_Saba",SPHEROID["GRS_1980",6378137.0,298.257222101]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],VERTCS["Saba_height",VDATUM["Saba_Vertical_Datum"],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",1.0],UNIT["Meter",1.0]]

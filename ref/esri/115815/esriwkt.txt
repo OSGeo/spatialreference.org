@@ -1,0 +1,1 @@
+VERTCS["PZ-90.02",DATUM["Parametry_Zemli_1990.02",SPHEROID["PZ_1990",6378136.0,298.257839303]],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",1.0],UNIT["Meter",1.0]]

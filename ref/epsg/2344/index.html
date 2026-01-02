@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../base.css">
+    <link rel="icon" type="image/x-icon" href="../../../favicon.ico">
+    <title>EPSG:2344 Xian 1980 / Gauss-Kruger CM 111E -- Spatial Reference</title>
+    <meta name="keywords" content="EPSG, 2344, Xian 1980 / Gauss-Kruger CM 111E, coordinate system, srs, crs" >
+    <meta name="description" content="EPSG:2344 Xian 1980 / Gauss-Kruger CM 111E - spatial reference system" >
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div id="header_logo">
+            <a href="../../../"><img src="../../../sr_logo.jpg" alt="SR logo"></a>
+        </div>
+        <div id="header_title">
+            EPSG:<wbr>2344
+        </div>
+    </div>
+    <div id="searchbox">
+        <form action="../../../ref/">
+            <input type="text" name="search" value="">
+            <input type="submit" value="Search">
+        </form>
+    </div>
+
+    <div id="navbar">
+        <div id="navlinks">
+            <a href="../../../">Home</a> |
+            <a href="../../../ref/">List all references</a> |
+            <a href="../../../explorer.html">Explorer</a>
+        </div>
+    </div>
+
+    <div id="content">
+        Previous: <a href="../../../ref/epsg/2343">EPSG:2343 : Xian 1980 / Gauss-Kruger CM 105E</a> | Next: <a href="../../../ref/epsg/2345">EPSG:2345 : Xian 1980 / Gauss-Kruger CM 117E</a>
+
+        <h1>EPSG:2344</h1>
+        <h2>Xian 1980 / Gauss-Kruger CM 111E</h2>
+        <p>
+            View <a href="https://epsg.org/crs_2344/Xian-1980-Gauss-Kruger-CM-111E.html" target="_blank">
+            EPSG.org definition for EPSG:2344</a> |
+            <a href="https://www.google.com/search?q=Xian+1980+%2F+Gauss-Kruger+CM+111E" target="_blank">Google it</a>
+        </p>
+        <ul>
+            <li><b>Type</b>: PROJECTED_CRS</li>
+            <li><b>WGS84 Bounds</b>: 108.0, 18.11, 114.0, 45.11</li>
+            <li><b>Scope</b>: Topographic mapping (medium scale).</li>
+            <li><b>Area</b>: China - onshore between 108°E and 114°E.</li>
+            <li><b>Projection method name</b>: Transverse Mercator</li>
+            <li><b title="Info got from PROJJSON">Axes</b>: Northing, Easting
+                    <span title="Abbreviation">(X,Y)</span>.
+                <b>Directions</b>: north, east.
+                <b title="Unit of Measurement">UoM</b>: metre.
+            </li>
+            <li><b>Base CRS</b>: <a href="../../epsg/4610" title="Xian 1980">EPSG:4610</a></li>
+        </ul>
+
+        <div class="list-box">
+        <ul>
+            <li>WKT-1
+                <ul>
+                    <li><a href="wkt.html">Well Known Text as HTML</a></li>
+                    <li><a href="prettywkt.txt">Human-Readable OGC WKT</a></li>
+                    <li><a href="ogcwkt">OGC WKT</a></li>
+                </ul>
+            </li>
+            <li>WKT-2
+                <ul>
+                    <li><a href="wkt2.html">Well Known Text 2 as HTML</a></li>
+                    <li><a href="prettywkt2.txt">Human-Readable OGC WKT2</a></li>
+                </ul>
+            </li>
+            <li><a href="esriwkt.txt">ESRI WKT</a></li>
+            <li><a href="#" onclick="download_prj('2344.prj', 'esriwkt.txt')" title="Download as PRJ file from ESRI">.PRJ</a></li>
+            <li><a href="projjson.json" title="PROJJSON">JSON</a></li>
+            <li><a href="proj4.txt">Proj4</a> (deprecated format)</li>
+        </ul>
+        </div>
+        <div id="map" class="map-container"></div>
+    </div>
+
+    <div id="footer">
+        <a href="../../../about.html">About</a> - Built on 2026-01-02 using
+        <a href="https://proj.org">PROJ</a> 9.7.1 (See detailed <a href="../../../versions.html">versions here</a>)
+    </div>
+
+    <script src="../../../base.js"></script>
+    <script>
+        init_map([108.0, 18.11, 114.0, 45.11])
+    </script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./base.css">
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
+    <title>About -- Spatial Reference</title>
+    <meta name="keywords" content="epsg, esri, iau, ignf, nkg, ogc, coordinate system, srs, crs" >
+    <meta name="description" content="Spatial Reference catalog of coordinate reference systems" >
+</head>
+
+<body>
+    <div id="header">
+        <div id="header_logo">
+            <a href="./"><img src="./sr_logo.jpg" alt="SR logo"></a>
+        </div>
+        <div id="header_title">
+            About spatial reference
+        </div>
+    </div>
+    <div id="searchbox">
+        <form action="./ref/">
+            <input type="text" name="search" value="">
+            <input type="submit" value="Search">
+        </form>
+    </div>
+
+    <div id="navbar">
+        <div id="navlinks">
+            <a href="./">Home</a> |
+            <a href="./ref/">List all references</a> |
+            <a href="./explorer.html">Explorer</a>
+        </div>
+    </div>
+
+    <div id="content">
+
+        <h3>Who</h3>
+        <p>spatialreference.org is a website redesigned in 2023 by
+        <a href="https://javier.jimenezshaw.com/">Javier Jimenez Shaw</a>,
+        based on <a href="https://proj.org/">PROJ.org</a> and now managed by the
+        PROJ development team. It helps assists others in their understanding,
+        discovery, and usage of spatial reference systems (SRS).
+        This refreshed version is a continuation of prior work of <a href="https://hobu.co/">Howard Butler</a>,
+        <a href="https://crschmidt.net/">Christopher Schmidt</a>,  <a href="http://dbsgeo.com/">Dane Springmeyer</a> and
+        <a href="http://porcupinealley.com/">Josh Livni</a> started in 2007.
+        </p>
+        <p>The source code of this website is available at <a href="https://github.com/OSGeo/spatialreference.org">
+            https://github.com/OSGeo/spatialreference.org</a>.</p>
+
+        <h3>What</h3>
+        <p>
+        There are currently several catalogs of SRS on this website:
+        EPSG, ESRI, IAU:2015, IGNF, NKG and OGC. Its content is automatically
+        refreshed from the PROJ' SRS database, at each PROJ release.
+        </p>
+        <p>
+        Each SRS is available in different formats under the root URL https://spatialreference.org/ref/authority/code:
+        <ul>
+            <li>As <a href="https://portal.opengeospatial.org/files/?artifact_id=999">WKT1</a> / Well-known Text v1 / OGC 01-009:
+                <ul>
+                    <li><span class="about_items">/wkt.html</span> as HTML content. <a href="./ref/epsg/4326/wkt.html">Example</a></li>
+                    <li><span class="about_items">/prettywkt.txt</span>: as text content, with indentation (for potential consumption by software). <a href="./ref/epsg/4326/prettywkt.txt">Example</a></li>
+                    <li><span class="about_items">/ogcwkt/</span>: as text content, single line (for potential consumption by software). <a href="./ref/epsg/4326/ogcwkt/">Example</a></li>
+                </ul>
+            </li>
+            <li>As <a href="https://docs.opengeospatial.org/is/18-010r7/18-010r7.html">WKT2:2019</a> / Well-known Text v2 / OGC 18-010r7:
+                <ul>
+                    <li><span class="about_items">/wkt2.html</span>: as HTML content. <a href="./ref/epsg/4326/wkt2.html">Example</a></li>
+                    <li><span class="about_items">/prettywkt2.txt</span>: as text-content, with indentation (for potential consumption by software). <a href="./ref/epsg/4326/prettywkt2.txt">Example</a></li>
+                </ul>
+            </li>
+            <li><span class="about_items">/esriwkt.txt</span>: WKT variant used by Esri software, typically for Shapefile .prj side-car file, as text content. <a href="./ref/epsg/4326/esriwkt.txt">Example</a></li>
+            <li><span class="about_items">/#</span>: same as above, but downloads the result as a file with .prj content. Requires JavaScript</li>
+            <li><span class="about_items">/projjson.json</span>: as JSON content, following the <a href="https://proj.org/specifications/projjson.html">PROJ JSON</a> encoding, which is equivalent to WKT2:2019. <a href="./ref/epsg/4326/projjson.json">Example</a></li>
+            <li><span class="about_items">/proj4.txt</span>: as PROJ.4 CRS string. Note this encoding is considered as legacy, and is generally lossy, particularly regarding geodetic or vertical datums. <a href="./ref/epsg/4326/proj4.txt">Example</a></li>
+        </ul>
+        <p>Note that the previous version of this website allowed user-defined
+        SRS to be submitted. This functionality has been removed, and the website
+        now only presents objects that have been vetted by reference authorities.
+        To get the old data, look for the file "sr-org.json" in the git repository.
+        </p>
+        <p>Spatialreference has a sibling project under the PROJ umbrella: <a href="https://crs-explorer.proj.org/">CRS Explorer</a>.
+            It has a different approach displaying all the available CRSs and filtering them. To show them all just click on
+            <a href="https://crs-explorer.proj.org/?all=true">https://crs-explorer.proj.org/?all=true</a>
+        </p>
+
+
+        <h3>Press</h3>
+        <ul>
+        <li><a href="https://www.3liz.com/blog/rldhont/index.php?post/2007/07/26/71-un-site-pour-les-systemes-de-references-spatials">Un site pour les Systèmes de Références Spatials</a> -- Link back to SpatialReference.org</li>
+        </ul>
+
+    </div>
+    <div id="footer">
+        <a href="./about.html">About</a> - Built on 2026-01-02 using
+        <a href="https://proj.org">PROJ</a> 9.7.1 (See detailed <a href="./versions.html">versions here</a>)
+    </div>
+</body>
+</html>

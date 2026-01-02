@@ -1,0 +1,1 @@
+GEOGCS["GCS_Bogota_Bogota",DATUM["Bogota_1975_(Bogota)",SPHEROID["International_1924",6378388.0,297.0]],PRIMEM["Bogota",-74.0809166666667],UNIT["Degree",0.0174532925199433]]

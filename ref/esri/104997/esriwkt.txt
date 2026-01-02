@@ -1,0 +1,1 @@
+GEOGCS["Larissa_2015",DATUM["Larissa_2015",SPHEROID["Larissa_2015",96000.0,0.0]],PRIMEM["Reference_Meridian",0.0],UNIT["Degree",0.0174532925199433]]

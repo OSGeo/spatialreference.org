@@ -1,0 +1,1 @@
+GEOGCS["GCS_Calypso_2000",DATUM["D_Calypso_2000",SPHEROID["Calypso_2000_IAU_IAG",9500.0,0.0]],PRIMEM["Reference_Meridian",0.0],UNIT["Degree",0.0174532925199433]]

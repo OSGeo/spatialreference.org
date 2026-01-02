@@ -1,0 +1,1 @@
+VERTCS["NGVD29_depth",VDATUM["National_Geodetic_Vertical_Datum_1929"],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",-1.0],UNIT["US survey foot",0.304800609601219]]

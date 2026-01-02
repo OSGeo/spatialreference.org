@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../base.css">
+    <link rel="icon" type="image/x-icon" href="../../../favicon.ico">
+    <title>EPSG:2125 NZGD2000 / Gawler 2000 -- Spatial Reference</title>
+    <meta name="keywords" content="EPSG, 2125, NZGD2000 / Gawler 2000, coordinate system, srs, crs" >
+    <meta name="description" content="EPSG:2125 NZGD2000 / Gawler 2000 - spatial reference system" >
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div id="header_logo">
+            <a href="../../../"><img src="../../../sr_logo.jpg" alt="SR logo"></a>
+        </div>
+        <div id="header_title">
+            EPSG:<wbr>2125
+        </div>
+    </div>
+    <div id="searchbox">
+        <form action="../../../ref/">
+            <input type="text" name="search" value="">
+            <input type="submit" value="Search">
+        </form>
+    </div>
+
+    <div id="navbar">
+        <div id="navlinks">
+            <a href="../../../">Home</a> |
+            <a href="../../../ref/">List all references</a> |
+            <a href="../../../explorer.html">Explorer</a>
+        </div>
+    </div>
+
+    <div id="content">
+        Previous: <a href="../../../ref/epsg/2124">EPSG:2124 : NZGD2000 / Mount Pleasant 2000</a> | Next: <a href="../../../ref/epsg/2126">EPSG:2126 : NZGD2000 / Timaru 2000</a>
+
+        <h1>EPSG:2125</h1>
+        <h2>NZGD2000 / Gawler 2000</h2>
+        <p>
+            View <a href="https://epsg.org/crs_2125/NZGD2000-Gawler-2000.html" target="_blank">
+            EPSG.org definition for EPSG:2125</a> |
+            <a href="https://www.google.com/search?q=NZGD2000+%2F+Gawler+2000" target="_blank">Google it</a>
+        </p>
+        <ul>
+            <li><b>Type</b>: PROJECTED_CRS</li>
+            <li><b>WGS84 Bounds</b>: 170.68, -44.25, 172.26, -43.13</li>
+            <li><b>Scope</b>: Cadastre.</li>
+            <li><b>Area</b>: New Zealand - South Island - Gawler meridional circuit area.</li>
+            <li><b>Projection method name</b>: Transverse Mercator</li>
+            <li><b title="Info got from PROJJSON">Axes</b>: Northing, Easting
+                    <span title="Abbreviation">(N,E)</span>.
+                <b>Directions</b>: north, east.
+                <b title="Unit of Measurement">UoM</b>: metre.
+            </li>
+            <li><b>Base CRS</b>: <a href="../../epsg/4167" title="NZGD2000">EPSG:4167</a></li>
+        </ul>
+
+        <div class="list-box">
+        <ul>
+            <li>WKT-1
+                <ul>
+                    <li><a href="wkt.html">Well Known Text as HTML</a></li>
+                    <li><a href="prettywkt.txt">Human-Readable OGC WKT</a></li>
+                    <li><a href="ogcwkt">OGC WKT</a></li>
+                </ul>
+            </li>
+            <li>WKT-2
+                <ul>
+                    <li><a href="wkt2.html">Well Known Text 2 as HTML</a></li>
+                    <li><a href="prettywkt2.txt">Human-Readable OGC WKT2</a></li>
+                </ul>
+            </li>
+            <li><a href="esriwkt.txt">ESRI WKT</a></li>
+            <li><a href="#" onclick="download_prj('2125.prj', 'esriwkt.txt')" title="Download as PRJ file from ESRI">.PRJ</a></li>
+            <li><a href="projjson.json" title="PROJJSON">JSON</a></li>
+            <li><a href="proj4.txt">Proj4</a> (deprecated format)</li>
+        </ul>
+        </div>
+        <div id="map" class="map-container"></div>
+    </div>
+
+    <div id="footer">
+        <a href="../../../about.html">About</a> - Built on 2026-01-02 using
+        <a href="https://proj.org">PROJ</a> 9.7.1 (See detailed <a href="../../../versions.html">versions here</a>)
+    </div>
+
+    <script src="../../../base.js"></script>
+    <script>
+        init_map([170.68, -44.25, 172.26, -43.13])
+    </script>
+</body>
+</html>

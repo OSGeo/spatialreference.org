@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../base.css">
+    <link rel="icon" type="image/x-icon" href="../../../favicon.ico">
+    <title>EPSG:3349 WGS 84 / PDC Mercator -- Spatial Reference</title>
+    <meta name="keywords" content="EPSG, 3349, WGS 84 / PDC Mercator, coordinate system, srs, crs" >
+    <meta name="description" content="EPSG:3349 WGS 84 / PDC Mercator - spatial reference system" >
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div id="header_logo">
+            <a href="../../../"><img src="../../../sr_logo.jpg" alt="SR logo"></a>
+        </div>
+        <div id="header_title">
+            EPSG:<wbr>3349
+        </div>
+    </div>
+    <div id="searchbox">
+        <form action="../../../ref/">
+            <input type="text" name="search" value="">
+            <input type="submit" value="Search">
+        </form>
+    </div>
+
+    <div id="navbar">
+        <div id="navlinks">
+            <a href="../../../">Home</a> |
+            <a href="../../../ref/">List all references</a> |
+            <a href="../../../explorer.html">Explorer</a>
+        </div>
+    </div>
+
+    <div id="content">
+        Previous: <a href="../../../ref/epsg/3348">EPSG:3348 : NAD83(CSRS) / Statistics Canada Lambert</a> | Next: <a href="../../../ref/epsg/3350">EPSG:3350 : Pulkovo 1942 / CS63 zone C0</a>
+
+        <h1>EPSG:3349</h1>
+        <h2>WGS 84 / PDC Mercator</h2>
+        <p>
+            View <a href="https://epsg.org/crs_3349/WGS-84-PDC-Mercator.html" target="_blank">
+            EPSG.org definition for EPSG:3349</a> |
+            <a href="https://www.google.com/search?q=WGS+84+%2F+PDC+Mercator" target="_blank">Google it</a>
+        </p>
+        <ul>
+            <li><b>Type</b>: PROJECTED_CRS</li>
+            <li><b>WGS84 Bounds</b>: 98.69, -60.0, -68.0, 66.67</li>
+            <li><b>Scope</b>: Topographic mapping (small scale).</li>
+            <li><b>Area</b>: Pacific Ocean - American Samoa, Antarctica, Australia, Brunei Darussalam, Cambodia, Canada, Chile, China, China - Hong Kong, China - Macao, Cook Islands, Ecuador, Fiji, French Polynesia, Guam, Indonesia, Japan, Kiribati, Democratic People&#39;s Republic of Korea (North Korea), Republic of Korea (South Korea), Malaysia, Marshall Islands, Federated States of Micronesia, Nauru, New Caledonia, New Zealand, Niue, Norfolk Island, Northern Mariana Islands, Palau, Panama, Papua New Guinea (PNG), Peru, Philippines, Pitcairn, Russian Federation, Samoa, Singapore, Solomon Islands, Taiwan, Thailand, Tokelau, Tonga, Tuvalu, United States (USA), United States Minor Outlying Islands, Vanuatu, Venezuela, Vietnam, Wallis and Futuna.</li>
+            <li><b>Projection method name</b>: Mercator (variant A)</li>
+            <li><b title="Info got from PROJJSON">Axes</b>: Easting, Northing
+                    <span title="Abbreviation">(E,N)</span>.
+                <b>Directions</b>: east, north.
+                <b title="Unit of Measurement">UoM</b>: metre.
+            </li>
+            <li><b>Base CRS</b>: <a href="../../epsg/4326" title="WGS 84">EPSG:4326</a></li>
+            <li><b class="darkred">Deprecated!</b>
+                See
+<a href="../../epsg/3832" title="WGS 84 / PDC Mercator">EPSG:3832</a> instead.
+            </li>
+        </ul>
+
+        <div class="list-box">
+        <ul>
+            <li>WKT-1
+                <ul>
+                    <li><a href="wkt.html">Well Known Text as HTML</a></li>
+                    <li><a href="prettywkt.txt">Human-Readable OGC WKT</a></li>
+                    <li><a href="ogcwkt">OGC WKT</a></li>
+                </ul>
+            </li>
+            <li>WKT-2
+                <ul>
+                    <li><a href="wkt2.html">Well Known Text 2 as HTML</a></li>
+                    <li><a href="prettywkt2.txt">Human-Readable OGC WKT2</a></li>
+                </ul>
+            </li>
+            <li><a href="esriwkt.txt">ESRI WKT</a></li>
+            <li><a href="#" onclick="download_prj('3349.prj', 'esriwkt.txt')" title="Download as PRJ file from ESRI">.PRJ</a></li>
+            <li><a href="projjson.json" title="PROJJSON">JSON</a></li>
+            <li><a href="proj4.txt">Proj4</a> (deprecated format)</li>
+        </ul>
+        </div>
+        <div id="map" class="map-container"></div>
+    </div>
+
+    <div id="footer">
+        <a href="../../../about.html">About</a> - Built on 2026-01-02 using
+        <a href="https://proj.org">PROJ</a> 9.7.1 (See detailed <a href="../../../versions.html">versions here</a>)
+    </div>
+
+    <script src="../../../base.js"></script>
+    <script>
+        init_map([98.69, -60.0, -68.0, 66.67])
+    </script>
+</body>
+</html>

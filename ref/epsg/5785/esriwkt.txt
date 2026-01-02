@@ -1,0 +1,1 @@
+VERTCS["SNN76",VDATUM["SNN76"],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",1.0],UNIT["Meter",1.0]]

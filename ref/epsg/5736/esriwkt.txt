@@ -1,0 +1,1 @@
+VERTCS["Yellow_Sea_1956",VDATUM["Yellow_Sea_1956"],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",1.0],UNIT["Meter",1.0]]

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../../base.css">
+    <link rel="icon" type="image/x-icon" href="../../../favicon.ico">
+    <title>EPSG:8927 SIRGAS-CON DGF06P01 -- Spatial Reference</title>
+    <meta name="keywords" content="EPSG, 8927, SIRGAS-CON DGF06P01, coordinate system, srs, crs" >
+    <meta name="description" content="EPSG:8927 SIRGAS-CON DGF06P01 - spatial reference system" >
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div id="header_logo">
+            <a href="../../../"><img src="../../../sr_logo.jpg" alt="SR logo"></a>
+        </div>
+        <div id="header_title">
+            EPSG:<wbr>8927
+        </div>
+    </div>
+    <div id="searchbox">
+        <form action="../../../ref/">
+            <input type="text" name="search" value="">
+            <input type="submit" value="Search">
+        </form>
+    </div>
+
+    <div id="navbar">
+        <div id="navlinks">
+            <a href="../../../">Home</a> |
+            <a href="../../../ref/">List all references</a> |
+            <a href="../../../explorer.html">Explorer</a>
+        </div>
+    </div>
+
+    <div id="content">
+        Previous: <a href="../../../ref/epsg/8926">EPSG:8926 : SIRGAS-CON DGF05P01</a> | Next: <a href="../../../ref/epsg/8928">EPSG:8928 : SIRGAS-CON DGF06P01</a>
+
+        <h1>EPSG:8927</h1>
+        <h2>SIRGAS-CON DGF06P01</h2>
+        <p>
+            View <a href="https://epsg.org/crs_8927/SIRGAS-CON-DGF06P01.html" target="_blank">
+            EPSG.org definition for EPSG:8927</a> |
+            <a href="https://www.google.com/search?q=SIRGAS-CON+DGF06P01" target="_blank">Google it</a>
+        </p>
+        <ul>
+            <li><b>Type</b>: GEOCENTRIC_CRS</li>
+            <li><b>WGS84 Bounds</b>: -122.19, -59.87, -25.28, 32.72</li>
+            <li><b>Scope</b>: Geodesy.</li>
+            <li><b>Area</b>: Latin America - Central America and South America, onshore and offshore.</li>
+            <li><b title="Info got from PROJJSON">Axes</b>: Geocentric X, Geocentric Y, Geocentric Z
+                    <span title="Abbreviation">(X,Y,Z)</span>.
+                <b>Directions</b>: geocentricX, geocentricY, geocentricZ.
+                <b title="Unit of Measurement">UoM</b>: metre.
+            </li>
+        </ul>
+
+        <div class="list-box">
+        <ul>
+            <li>WKT-1
+                <ul>
+                    <li><a href="wkt.html">Well Known Text as HTML</a></li>
+                    <li><a href="prettywkt.txt">Human-Readable OGC WKT</a></li>
+                    <li><a href="ogcwkt">OGC WKT</a></li>
+                </ul>
+            </li>
+            <li>WKT-2
+                <ul>
+                    <li><a href="wkt2.html">Well Known Text 2 as HTML</a></li>
+                    <li><a href="prettywkt2.txt">Human-Readable OGC WKT2</a></li>
+                </ul>
+            </li>
+            <li><a href="esriwkt.txt">ESRI WKT</a></li>
+            <li><a href="#" onclick="download_prj('8927.prj', 'esriwkt.txt')" title="Download as PRJ file from ESRI">.PRJ</a></li>
+            <li><a href="projjson.json" title="PROJJSON">JSON</a></li>
+            <li><a href="proj4.txt">Proj4</a> (deprecated format)</li>
+        </ul>
+        </div>
+        <div id="map" class="map-container"></div>
+    </div>
+
+    <div id="footer">
+        <a href="../../../about.html">About</a> - Built on 2026-01-02 using
+        <a href="https://proj.org">PROJ</a> 9.7.1 (See detailed <a href="../../../versions.html">versions here</a>)
+    </div>
+
+    <script src="../../../base.js"></script>
+    <script>
+        init_map([-122.19, -59.87, -25.28, 32.72])
+    </script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+VERTCS["EVRF_2019",VDATUM["European_Vertical_Reference_Frame_2019"],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",1.0],UNIT["Meter",1.0]]

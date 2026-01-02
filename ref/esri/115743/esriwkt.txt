@@ -1,0 +1,1 @@
+VERTCS["Lao_1997",DATUM["D_Lao_National_Datum_1997",SPHEROID["Krasovsky_1940",6378245.0,298.3]],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",1.0],UNIT["Meter",1.0]]

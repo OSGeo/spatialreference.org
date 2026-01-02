@@ -1,0 +1,1 @@
++proj=longlat +ellps=clrk66 +vunits=m +no_defs +type=crs
