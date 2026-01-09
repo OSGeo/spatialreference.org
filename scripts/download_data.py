@@ -21,7 +21,7 @@ def fetch_page(domain: str, page: int, session: requests.Session):
         response.raise_for_status()
         return response.text
     except requests.RequestException as e:
-        print(f"⚠️ Error fetching page {page_url}: {e}")
+        print(f"Error fetching page {page_url}: {e}")
         return None
 
 
@@ -48,9 +48,9 @@ def fetch_ogcwkt(domain: str, code: str, session: requests.Session):
         if response.ok:
             return response.text.strip()
         else:
-            print(f"⚠️ Failed to fetch OGCWKT for {domain}/{code}: HTTP {response.status_code}")
+            print(f"Failed to fetch OGCWKT for {domain}/{code}: HTTP {response.status_code}")
     except requests.RequestException as e:
-        print(f"⚠️ Error fetching OGCWKT for {domain}/{code}: {e}")
+        print(f"Error fetching OGCWKT for {domain}/{code}: {e}")
     return None
 
 
@@ -83,7 +83,7 @@ This code is here just to track it.
             entries = parse_page(domain, html_text)
             print(f"Page {page}: found {len(entries)} entries")
             if len(entries) == 0:
-                print(f"✅ Done! Last page was #{page - 1}")
+                print(f"Done! Last page was #{page - 1}")
                 break
 
             for code, name in entries:
