@@ -1,0 +1,1 @@
+GEOGCS["GCS_SRGI2013_epoch_2021_0",DATUM["D_Sistem_Referensi_Geospasial_Indonesia_2013_epoch_2021_0",SPHEROID["WGS_1984",6378137.0,298.257223563]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433],LINUNIT["Meter",1.0]]

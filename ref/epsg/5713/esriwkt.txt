@@ -1,0 +1,1 @@
+VERTCS["CGVD_1928",VDATUM["Canadian_Geodetic_Vertical_Datum_of_1928"],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",1.0],UNIT["Meter",1.0]]
