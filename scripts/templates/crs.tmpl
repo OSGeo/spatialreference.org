@@ -98,7 +98,26 @@
         </div>
 
         {%- if bounds_map %}
+        <div id="map_coord_container">
         <div id="map" class="map-container"></div>
+        {%- if crs_type in ['PROJECTED_CRS', 'GEOGRAPHIC_2D_CRS'] %}
+        <div id="coordinates">
+            <div>Marker coordinates <span id="drag_marker">(Drag to update)</span></div>
+            <table>
+                <tr>
+                    <td class="name"></td>
+                    <td class="number"></td>
+                </tr>
+                <tr>
+                    <td class="name"></td>
+                    <td class="number"></td>
+                </tr>
+            </table>
+            <a href="https://jjimenezshaw.github.io/wasm-proj/transform.html?sh=EPSG%3A4326&th={{ authority }}%3A{{ code }}"
+                target="_blank" >Transform coordinates</a>
+        </div>
+        </div>
+        {%- endif %}
         {%- endif %}
     </div>
 
@@ -107,8 +126,13 @@
     </div>
 
     <script src="{{ home_dir }}/base.js"></script>
+    {%- if crs_type in ['PROJECTED_CRS', 'GEOGRAPHIC_2D_CRS'] %}
+    <script src="https://jjimenezshaw.github.io/wasm-proj/proj/wasm/projModule.js"></script>
+    <script src="https://jjimenezshaw.github.io/wasm-proj/proj/projFunctions.js"></script>
+    {%- endif %}
+
     <script>
-        init_map([{{ bounds_map }}])
+        init_map([{{ bounds_map }}], '{{ crs_type }}', '{{ authority }}:{{ code }}')
     </script>
 </body>
 </html>
