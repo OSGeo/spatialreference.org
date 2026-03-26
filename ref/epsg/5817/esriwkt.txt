@@ -1,0 +1,1 @@
+LOCAL_CS["Tombak LNG plant",LOCAL_DATUM["Tombak LNG plant",32767],UNIT["Meter",1.0],AXIS["Plant East",OTHER],AXIS["Plant North",OTHER]]

@@ -1,0 +1,1 @@
+VERTCS["MSL_depth_(ftUS)",VDATUM["Mean_Sea_Level"],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",-1.0],UNIT["US survey foot",0.304800609601219]]

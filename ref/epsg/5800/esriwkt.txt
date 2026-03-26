@@ -1,0 +1,1 @@
+LOCAL_CS["Astra Minas Grid",LOCAL_DATUM["Astra Minas",32767],UNIT["Meter",1.0],AXIS["First local axis",NORTH],AXIS["Second local axis",WEST]]

@@ -1,0 +1,1 @@
+VERTCS["CSRN_epoch_2025.0_(NAD83_2011)",DATUM["California_Spatial_Reference_Network_epoch_2025.0_(NAD83_2011)",SPHEROID["GRS_1980",6378137.0,298.257222101]],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",1.0],UNIT["Meter",1.0]]

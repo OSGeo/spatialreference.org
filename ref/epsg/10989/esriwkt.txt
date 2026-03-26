@@ -1,0 +1,1 @@
+VERTCS["London_Survey_Grid_height",VDATUM["London_Survey_Grid_height_datum"],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",1.0],UNIT["Meter",1.0]]

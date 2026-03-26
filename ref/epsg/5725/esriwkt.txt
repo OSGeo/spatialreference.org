@@ -1,0 +1,1 @@
+VERTCS["Fahud_Height_Datum_1993",VDATUM["Fahud_Height_Datum"],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",1.0],UNIT["Meter",1.0]]
