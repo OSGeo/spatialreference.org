@@ -1,0 +1,18 @@
+GEOGCRS["GCS_Sphere_EMEP",
+    DATUM["D_Sphere_EMEP",
+        ELLIPSOID["Sphere_EMEP",6370000,0,
+            LENGTHUNIT["metre",1]]],
+    PRIMEM["Greenwich",0,
+        ANGLEUNIT["degree",0.0174532925199433]],
+    CS[ellipsoidal,2],
+        AXIS["geodetic latitude (Lat)",north,
+            ORDER[1],
+            ANGLEUNIT["degree",0.0174532925199433]],
+        AXIS["geodetic longitude (Lon)",east,
+            ORDER[2],
+            ANGLEUNIT["degree",0.0174532925199433]],
+    USAGE[
+        SCOPE["Not known."],
+        AREA["Europe"],
+        BBOX[34,-30,85,50]],
+    ID["ESRI",104128]]

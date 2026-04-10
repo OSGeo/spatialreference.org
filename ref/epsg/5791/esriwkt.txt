@@ -1,0 +1,1 @@
+VERTCS["NGC_1948",VDATUM["Nivellement_General_de_la_Corse_1948"],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",1.0],UNIT["Meter",1.0]]
