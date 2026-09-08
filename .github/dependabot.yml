@@ -9,12 +9,16 @@ updates:
     directory: "/scripts/"
     schedule:
       interval: "weekly"
+    cooldown:
+      default-days: 0
   
   # Configuration for pyproj
   - package-ecosystem: "pip"
     directory: "/scripts/"
     schedule:
       interval: "weekly"
+    cooldown:
+      default-days: 1
 
   # GitHub actions themselves
   - package-ecosystem: "github-actions"
