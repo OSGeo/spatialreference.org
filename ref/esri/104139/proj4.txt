@@ -1,0 +1,1 @@
++proj=longlat +ellps=clrk80ign +no_defs +type=crs

@@ -1,0 +1,1 @@
+VERTCS["NGF_IGN69",VDATUM["Nivellement_General_de_la_France_IGN69"],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",1.0],UNIT["Meter",1.0]]

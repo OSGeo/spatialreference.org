@@ -1,0 +1,1 @@
++proj=lcc +lat_1=9 +lat_0=9 +lon_0=-83.6666666666667 +k_0=0.99995696 +x_0=500000 +y_0=327987.436 +ellps=clrk66 +units=m +no_defs +type=crs

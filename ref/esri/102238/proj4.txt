@@ -1,0 +1,1 @@
++proj=aeqd +lat_0=15.1675572222222 +lon_0=145.711286944444 +x_0=50000 +y_0=50000 +ellps=clrk66 +units=m +no_defs +type=crs

@@ -1,0 +1,1 @@
++proj=tmerc +lat_0=-43.5906375833333 +lon_0=172.727193583333 +k=1 +x_0=300000 +y_0=700000 +ellps=intl +units=m +no_defs +type=crs

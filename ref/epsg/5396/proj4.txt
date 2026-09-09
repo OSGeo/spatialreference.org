@@ -1,0 +1,1 @@
++proj=utm +zone=26 +south +ellps=GRS80 +units=m +no_defs +type=crs

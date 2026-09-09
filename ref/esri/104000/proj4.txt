@@ -1,0 +1,1 @@
++proj=longlat +datum=NAD27 +no_defs +type=crs

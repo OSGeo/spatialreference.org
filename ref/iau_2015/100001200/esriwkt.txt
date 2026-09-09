@@ -1,0 +1,1 @@
+GEOGCS["GCS_Churyumov-Gerasimenko_2015_-_Sphere_Ocentric",DATUM["D_Churyumov-Gerasimenko_2015_-_Sphere",SPHEROID["Churyumov-Gerasimenko_2015_-_Sphere",1650.0,0.0]],PRIMEM["Reference_Meridian",0.0],UNIT["Degree",0.0174532925199433]]

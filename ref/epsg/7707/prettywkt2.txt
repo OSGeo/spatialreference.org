@@ -1,0 +1,10 @@
+VERTCRS["ODN (Offshore) height",
+    VDATUM["Ordnance Datum Newlyn (Offshore)"],
+    CS[vertical,1],
+        AXIS["gravity-related height (H)",up,
+            LENGTHUNIT["metre",1]],
+    USAGE[
+        SCOPE["Geodesy, engineering survey."],
+        AREA["United Kingdom (UK) - offshore between 2km from shore and boundary of UKCS within 49°45'N to 61°N and 9°W to 2°E."],
+        BBOX[49.75,-9.01,61.01,2.01]],
+    ID["EPSG",7707]]

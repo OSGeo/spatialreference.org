@@ -1,0 +1,1 @@
++proj=moll +lon_0=0 +x_0=0 +y_0=0 +a=71492000 +b=66854000 +units=m +no_defs +type=crs

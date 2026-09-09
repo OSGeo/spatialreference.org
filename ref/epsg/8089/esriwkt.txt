@@ -1,0 +1,1 @@
+VERTCS["ISH2004_height",VDATUM["Landshaedarkerfi_Islands_2004"],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",1.0],UNIT["Meter",1.0]]

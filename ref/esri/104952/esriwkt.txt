@@ -1,0 +1,1 @@
+GEOGCS["GCS_Miranda_2000",DATUM["D_Miranda_2000",SPHEROID["Miranda_2000_IAU_IAG",235800.0,0.0]],PRIMEM["Reference_Meridian",0.0],UNIT["Degree",0.0174532925199433]]

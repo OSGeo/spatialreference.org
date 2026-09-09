@@ -1,0 +1,1 @@
+GEOGCS["GCS_Halley_2015_Ocentric",DATUM["D_Halley_2015",SPHEROID["Halley_2015",8000.0,2.0]],PRIMEM["Reference_Meridian",0.0],UNIT["Degree",0.0174532925199433]]

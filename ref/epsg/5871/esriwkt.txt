@@ -1,0 +1,1 @@
+VERTCS["HHWLT_Height",VDATUM["Higher_High_Water_Large_Tide"],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",1.0],UNIT["Meter",1.0]]

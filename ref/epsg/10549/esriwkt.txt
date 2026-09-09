@@ -1,0 +1,1 @@
+VERTCS["DKMSL(2023)_depth",VDATUM["Denmark_Mean_Sea_Level_(2023)"],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",-1.0],UNIT["Meter",1.0]]

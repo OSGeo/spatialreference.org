@@ -1,0 +1,1 @@
+GEOGCS["GCS_Juan_de_Nova_geographiques_dms",DATUM["D_JUAN_DE_NOVA_MHM_1953",SPHEROID["International_1924",6378388.0,297.0]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]]

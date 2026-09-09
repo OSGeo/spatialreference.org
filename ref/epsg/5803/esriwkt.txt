@@ -1,0 +1,1 @@
+LOCAL_CS["Maturin Grid",LOCAL_DATUM["Maturin",32767],UNIT["Meter",1.0],AXIS["Northing",NORTH],AXIS["Easting",EAST]]

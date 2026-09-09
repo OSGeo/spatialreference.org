@@ -1,0 +1,1 @@
+VERTCS["Nepal_Nagarkot",DATUM["D_Nepal_Nagarkot",SPHEROID["Everest_Adjustment_1937",6377276.345,300.8017]],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",1.0],UNIT["Meter",1.0]]

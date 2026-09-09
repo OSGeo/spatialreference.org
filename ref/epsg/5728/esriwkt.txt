@@ -1,0 +1,1 @@
+VERTCS["LN_1902",VDATUM["Landesnivellement_1902"],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",1.0],UNIT["Meter",1.0]]

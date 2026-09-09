@@ -1,0 +1,1 @@
+GEOGCS["GCS_Walbeck",DATUM["D_Walbeck",SPHEROID["Walbeck",6376896.0,302.78]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]]

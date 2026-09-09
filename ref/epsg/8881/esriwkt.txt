@@ -1,0 +1,1 @@
+VERTCS["Vienna_height",VDATUM["Wiener_Null"],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",1.0],UNIT["Meter",1.0]]

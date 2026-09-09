@@ -1,0 +1,1 @@
+VERTCS["BGS2005_height",VDATUM["Bulgarian_Height_System_2005"],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",1.0],UNIT["Meter",1.0]]

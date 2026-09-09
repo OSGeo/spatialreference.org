@@ -1,0 +1,1 @@
+VERTCS["KSA-GRF17",DATUM["Kingdom_of_Saudi_Arabia_Geodetic_Reference_Frame_2017",SPHEROID["GRS_1980",6378137.0,298.257222101]],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",1.0],UNIT["Meter",1.0]]

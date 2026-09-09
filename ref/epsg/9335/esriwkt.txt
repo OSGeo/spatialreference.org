@@ -1,0 +1,1 @@
+VERTCS["KSA-VRF14_height",VDATUM["Kingdom_of_Saudi_Arabia_Vertical_Reference_Frame_Jeddah_2014"],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",1.0],UNIT["Meter",1.0]]

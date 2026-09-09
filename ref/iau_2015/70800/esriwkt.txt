@@ -1,0 +1,1 @@
+GEOGCS["GCS_Bianca_2015_-_Sphere_Ocentric",DATUM["D_Bianca_2015_-_Sphere",SPHEROID["Bianca_2015_-_Sphere",21000.0,0.0]],PRIMEM["Reference_Meridian",0.0],UNIT["Degree",0.0174532925199433]]

@@ -1,0 +1,1 @@
++proj=longlat +ellps=intl +vunits=m +no_defs +type=crs

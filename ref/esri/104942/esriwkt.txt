@@ -1,0 +1,1 @@
+GEOGCS["GCS_Tethys_2000",DATUM["D_Tethys_2000",SPHEROID["Tethys_2000_IAU_IAG",529800.0,0.0]],PRIMEM["Reference_Meridian",0.0],UNIT["Degree",0.0174532925199433]]

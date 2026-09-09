@@ -1,0 +1,1 @@
++proj=cass +lat_0=-18 +lon_0=178 +x_0=109435.392 +y_0=141622.272 +a=6378306.3696 +b=6356571.996 +units=link +no_defs +type=crs

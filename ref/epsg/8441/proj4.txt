@@ -1,0 +1,1 @@
++proj=labrd +lat_0=-18.9 +lon_0=46.4372291666667 +azi=18.9 +k=0.9995 +x_0=400000 +y_0=800000 +ellps=intl +units=m +no_defs +type=crs

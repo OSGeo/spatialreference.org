@@ -1,0 +1,1 @@
++proj=tmerc +lat_0=49 +lon_0=-2 +k=0.999612767259319 +x_0=196002.254028371 +y_0=71000.8165102774 +ellps=airy +units=m +no_defs +type=crs

@@ -1,0 +1,1 @@
+GEOGCS["GCS_Fangataufa_MOP84_geographiques_dms",DATUM["D_MOP84_FANGATAUFA_1984",SPHEROID["International_1924",6378388.0,297.0]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]]

@@ -1,0 +1,1 @@
+VERTCS["HVRS_1971",VDATUM["Croatian_Vertical_Reference_System_1971"],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",1.0],UNIT["Meter",1.0]]

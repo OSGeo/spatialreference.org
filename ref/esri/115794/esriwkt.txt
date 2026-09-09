@@ -1,0 +1,1 @@
+VERTCS["Slovenia_1996",DATUM["D_Slovenia_Geodetic_Datum_1996",SPHEROID["GRS_1980",6378137.0,298.257222101]],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",1.0],UNIT["Meter",1.0]]

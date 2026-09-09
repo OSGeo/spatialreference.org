@@ -1,0 +1,1 @@
+VERTCS["Sint_Eustatius_height",VDATUM["Sint_Eustatius_Vertical_Datum"],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",1.0],UNIT["Meter",1.0]]

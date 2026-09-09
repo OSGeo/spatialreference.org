@@ -1,0 +1,1 @@
+VERTCS["NZVD2016_height",VDATUM["New_Zealand_Vertical_Datum_2016"],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",1.0],UNIT["Meter",1.0]]

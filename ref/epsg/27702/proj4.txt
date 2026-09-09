@@ -1,0 +1,1 @@
++proj=aeqd +lat_0=-90 +lon_0=0 +x_0=3714266.977 +y_0=3402016.506 +datum=WGS84 +units=m +no_defs +type=crs

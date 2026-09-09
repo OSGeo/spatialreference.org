@@ -1,0 +1,1 @@
+VERTCS["Australian_1984",DATUM["D_Australian_1984",SPHEROID["Australian",6378160.0,298.25]],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",1.0],UNIT["Meter",1.0]]

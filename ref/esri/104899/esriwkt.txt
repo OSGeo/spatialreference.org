@@ -1,0 +1,1 @@
+GEOGCS["Polydeuces_2015",DATUM["Polydeuces_2015",SPHEROID["Polydeuces_2015",1300.0,0.0]],PRIMEM["Reference_Meridian",0.0],UNIT["Degree",0.0174532925199433]]

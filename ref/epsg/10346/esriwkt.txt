@@ -1,0 +1,1 @@
+GEOGCS["NSIDC_Authalic_Sphere",DATUM["NSIDC_International_1924_Authalic_Sphere",SPHEROID["Sphere_International_1924_Authalic",6371228.0,0.0]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]]

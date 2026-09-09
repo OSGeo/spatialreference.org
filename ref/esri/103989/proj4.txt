@@ -1,0 +1,1 @@
++proj=lcc +lat_0=-22 +lon_0=19 +lat_1=-20 +lat_2=-26 +x_0=0 +y_0=0 +ellps=bess_nam +units=mm +no_defs +type=crs

@@ -1,0 +1,1 @@
++proj=longlat +ellps=evrst69 +no_defs +type=crs

@@ -1,0 +1,1 @@
+GEOGCS["Pallene_2015",DATUM["Pallene_2015",SPHEROID["Pallene_2015",2230.0,0.0]],PRIMEM["Reference_Meridian",0.0],UNIT["Degree",0.0174532925199433]]
