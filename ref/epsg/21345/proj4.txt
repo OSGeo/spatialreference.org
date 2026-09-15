@@ -1,0 +1,1 @@
++proj=tmerc +lat_0=0 +lon_0=135 +k=1 +x_0=250000 +y_0=0 +ellps=GSK2011 +units=m +no_defs +type=crs

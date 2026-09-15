@@ -1,0 +1,10 @@
+VERTCRS["SVD2006 height",
+    VDATUM["Svalbard vertical datum 2006"],
+    CS[vertical,1],
+        AXIS["gravity-related height (H)",up,
+            LENGTHUNIT["metre",1]],
+    USAGE[
+        SCOPE["Geodesy, topographic mapping."],
+        AREA["4860 - Svalbard - onshore and offshore - west of 37.91° between 76.21° and 81.12°"],
+        BBOX[76.22,-3.35,81.11,37.91]],
+    ID["EPSG",20000]]

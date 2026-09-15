@@ -1,0 +1,1 @@
+GEOGCS["GCS_Graciosa_Base_SW_1948",DATUM["D_Graciosa_Base_SW_1948",SPHEROID["International_1924",6378388.0,297.0]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]]

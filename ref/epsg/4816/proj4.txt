@@ -1,0 +1,1 @@
++proj=longlat +ellps=clrk80ign +pm=paris +no_defs +type=crs

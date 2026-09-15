@@ -1,0 +1,1 @@
+GEOGCS["GCS_Crozet_-_Possession_1963_geographiques_dms",DATUM["D_CROZET-POSSESSION_1963",SPHEROID["International_1924",6378388.0,297.0]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433],LINUNIT["Meter",1.0]]

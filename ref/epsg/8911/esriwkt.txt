@@ -1,0 +1,1 @@
+VERTCS["DACR52_height",VDATUM["Datum_Altimetrico_de_Costa_Rica_1952"],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",1.0],UNIT["Meter",1.0]]

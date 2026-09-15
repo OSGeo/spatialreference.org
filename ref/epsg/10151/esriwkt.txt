@@ -1,0 +1,1 @@
+VERTCS["CD_UK_Ireland_VORF08_depth",VDATUM["Chart_Datum_UK_Ireland_VORF08"],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",-1.0],UNIT["Meter",1.0]]

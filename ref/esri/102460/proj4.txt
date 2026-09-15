@@ -1,0 +1,1 @@
++proj=ortho +lat_0=33.6340844042 +lon_0=-84.4306922136 +alpha=-0.01935 +k=1.000047 +x_0=3424.05110490221 +y_0=937.670307340615 +datum=NAD83 +units=us-ft +no_defs +type=crs

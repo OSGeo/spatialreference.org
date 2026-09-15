@@ -1,0 +1,1 @@
+VERTCS["Ibiza_height",VDATUM["Ibiza"],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",1.0],UNIT["Meter",1.0]]

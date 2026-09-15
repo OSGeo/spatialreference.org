@@ -1,0 +1,1 @@
+VERTCS["IGD05(2012)",DATUM["Israeli_Geodetic_Datum_2005(2012)",SPHEROID["WGS_1984",6378137.0,298.257223563]],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",1.0],UNIT["Meter",1.0]]

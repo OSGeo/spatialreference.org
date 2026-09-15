@@ -1,0 +1,1 @@
+VERTCS["HS2-VRF_height",VDATUM["HS2_Vertical_Reference_Frame"],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",1.0],UNIT["Meter",1.0]]

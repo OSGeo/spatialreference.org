@@ -1,0 +1,10 @@
+VERTCRS["NAD_1983_2011",
+    VDATUM["D_NAD_1983_2011"],
+    CS[vertical,1],
+        AXIS["ellipsoidal height (h)",up,
+            LENGTHUNIT["metre",1]],
+    USAGE[
+        SCOPE["Not known."],
+        AREA["Puerto Rico - onshore and offshore. United States (USA) - Alaska and conterminous (contiguous) lower 48 states (CONUS) - onshore and offshore."],
+        BBOX[14.92,167.65,74.71,-63.88]],
+    ID["ESRI",115755]]

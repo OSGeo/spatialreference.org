@@ -1,0 +1,1 @@
++proj=col_urban +lat_0=4.532325 +lon_0=-75.6734891666667 +x_0=1155824.666 +y_0=993087.465 +h_0=1470 +ellps=GRS80 +units=m +no_defs +type=crs

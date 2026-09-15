@@ -1,0 +1,1 @@
++proj=lcc +lat_0=65.1012708888889 +lon_0=177 +lat_1=69 +lat_2=61 +x_0=0 +y_0=0 +datum=WGS84 +units=m +no_defs +type=crs

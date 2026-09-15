@@ -1,0 +1,10 @@
+VERTCRS["NAVD88 height",
+    VDATUM["North American Vertical Datum 1988"],
+    CS[vertical,1],
+        AXIS["gravity-related height (H)",up,
+            LENGTHUNIT["metre",1]],
+    USAGE[
+        SCOPE["Geodesy, engineering survey, topographic mapping."],
+        AREA["Mexico - onshore. United States (USA) - onshore - United States (USA) - Alaska, conterminous (contiguous) lower 48 states (CONUS)."],
+        BBOX[14.51,172.42,71.4,-66.91]],
+    ID["EPSG",5703]]

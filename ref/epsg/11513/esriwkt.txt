@@ -1,0 +1,1 @@
+VERTCS["COLGVD2023_height",VDATUM["Colombian_Geodetic_Vertical_Datum_2023"],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",1.0],UNIT["Meter",1.0]]

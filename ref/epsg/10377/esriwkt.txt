@@ -1,0 +1,1 @@
+VERTCS["Cais_da_Figueirinha_depth",VDATUM["Cais_da_Figueirinha-Angra_do_Heroismo"],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",-1.0],UNIT["Meter",1.0]]

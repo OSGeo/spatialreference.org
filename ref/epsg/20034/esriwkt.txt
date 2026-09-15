@@ -1,0 +1,1 @@
+VERTCS["CGVD2013a(2002)_height",VDATUM["Canadian_Geodetic_Vertical_Datum_of_2013_(CGG2013a)_epoch_2002"],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",1.0],UNIT["Meter",1.0]]

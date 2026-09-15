@@ -1,0 +1,1 @@
+VERTCS["JSLD72_height",VDATUM["Japanese_Standard_Levelling_Datum_1972"],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",1.0],UNIT["Meter",1.0]]

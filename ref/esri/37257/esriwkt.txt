@@ -1,0 +1,1 @@
+GEOGCS["GCS_S42_Hungary",DATUM["D_S42_Hungary",SPHEROID["Krasovsky_1940",6378245.0,298.3]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]]

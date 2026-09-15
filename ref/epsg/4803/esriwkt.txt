@@ -1,0 +1,1 @@
+GEOGCS["GCS_Lisbon_Lisbon",DATUM["Lisbon_1937_(Lisbon)",SPHEROID["International_1924",6378388.0,297.0]],PRIMEM["Lisbon",-9.13190611111111],UNIT["Degree",0.0174532925199433]]

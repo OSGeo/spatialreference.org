@@ -1,0 +1,1 @@
+LOCAL_CS["Christmas Island Grid 1985",LOCAL_DATUM["Christmas Island Datum 1985",32767],UNIT["Meter",1.0],AXIS["Easting",EAST],AXIS["Northing",NORTH]]

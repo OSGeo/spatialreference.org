@@ -1,0 +1,1 @@
+VERTCS["GLLAT(2023)_depth",VDATUM["Greenland_Lowest_Astronomic_Tide_(2023)"],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",-1.0],UNIT["Meter",1.0]]

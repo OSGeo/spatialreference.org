@@ -1,0 +1,1 @@
+VERTCS["Lagos_1955",VDATUM["Lagos_1955"],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",1.0],UNIT["Meter",1.0]]

@@ -1,0 +1,1 @@
+GEOGCS["St._Stephen(Ferro)",DATUM["St._Stephen_(Ferro)",SPHEROID["Zach_1812",6376045.0,310.0]],PRIMEM["Ferro",-17.6666666666667],UNIT["Degree",0.0174532925199433]]

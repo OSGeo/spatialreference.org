@@ -1,0 +1,10 @@
+VERTCRS["NGVD29 height (m)",
+    VDATUM["National Geodetic Vertical Datum 1929"],
+    CS[vertical,1],
+        AXIS["gravity-related height (H)",up,
+            LENGTHUNIT["metre",1]],
+    USAGE[
+        SCOPE["Intermediate stage in transformations - not used otherwise."],
+        AREA["United States (USA) - conterminous (contiguous) lower 48 states (CONUS) - onshore."],
+        BBOX[24.41,-124.79,49.38,-66.91]],
+    ID["EPSG",7968]]

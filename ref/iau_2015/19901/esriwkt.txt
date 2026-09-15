@@ -1,0 +1,1 @@
+GEOGCS["GCS_Mercury_2015_Ographic",DATUM["D_Mercury_2015",SPHEROID["Mercury_2015",2440530.0,1075.12334801762]],PRIMEM["Reference_Meridian",0.0],UNIT["Degree",0.0174532925199433]]

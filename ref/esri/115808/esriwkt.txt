@@ -1,0 +1,1 @@
+VERTCS["Unknown_height_system_(US_survey_feet)",VDATUM["Unknown_height_system_(US_survey_feet)"],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",1.0],UNIT["US survey foot",0.304800609601219]]

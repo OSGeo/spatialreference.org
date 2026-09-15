@@ -1,0 +1,1 @@
++proj=aea +lat_0=-30 +lon_0=25 +lat_1=-22 +lat_2=-38 +x_0=1400000 +y_0=1300000 +ellps=WGS84 +units=m +no_defs +type=crs

@@ -1,0 +1,10 @@
+VERTCRS["CH1903+",
+    VDATUM["D_CH1903+"],
+    CS[vertical,1],
+        AXIS["ellipsoidal height (h)",up,
+            LENGTHUNIT["metre",1]],
+    USAGE[
+        SCOPE["Not known."],
+        AREA["Liechtenstein; Switzerland."],
+        BBOX[45.81,5.95,47.81,10.5]],
+    ID["ESRI",115875]]

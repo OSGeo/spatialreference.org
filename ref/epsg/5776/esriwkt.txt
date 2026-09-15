@@ -1,0 +1,1 @@
+VERTCS["NN54",VDATUM["Norway_Normal_Null_1954"],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",1.0],UNIT["Meter",1.0]]

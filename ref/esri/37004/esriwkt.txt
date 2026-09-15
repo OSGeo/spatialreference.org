@@ -1,0 +1,1 @@
+GEOGCS["GCS_Fischer_Modified",DATUM["D_Fischer_Modified",SPHEROID["Fischer_Modified",6378155.0,298.3]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]]

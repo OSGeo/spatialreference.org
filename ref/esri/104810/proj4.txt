@@ -1,0 +1,1 @@
++proj=longlat +a=6378376.331 +rf=298.268413800752 +no_defs +type=crs

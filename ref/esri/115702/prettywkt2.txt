@@ -1,0 +1,10 @@
+VERTCRS["NAD_1983",
+    VDATUM["D_North_American_1983"],
+    CS[vertical,1],
+        AXIS["ellipsoidal height (h)",up,
+            LENGTHUNIT["metre",1]],
+    USAGE[
+        SCOPE["Not known."],
+        AREA["North America - onshore and offshore: Canada. Puerto Rico. United States (USA). US Virgin Islands. British Virgin Islands."],
+        BBOX[14.92,167.65,86.46,-40.73]],
+    ID["ESRI",115702]]

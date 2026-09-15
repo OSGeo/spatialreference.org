@@ -1,0 +1,10 @@
+VERTCRS["DHHN2016 height",
+    VDATUM["Deutsches Haupthoehennetz 2016"],
+    CS[vertical,1],
+        AXIS["gravity-related height (H)",up,
+            LENGTHUNIT["metre",1]],
+    USAGE[
+        SCOPE["Geodesy, engineering survey, topographic mapping."],
+        AREA["Germany - onshore and offshore."],
+        BBOX[47.27,3.34,55.92,15.04]],
+    ID["EPSG",7837]]

@@ -1,0 +1,1 @@
+VERTCS["NGVD_1929_height_(m)",VDATUM["National_Geodetic_Vertical_Datum_1929"],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",1.0],UNIT["Meter",1.0]]

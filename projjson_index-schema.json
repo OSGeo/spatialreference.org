@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "array",
+  "description": "Array mapping from CRS authority code to PROJJSON representations",
+  "items": {
+    "type": "object",
+    "required": [
+      "auth_name",
+      "code",
+      "link"
+    ],
+    "properties": {
+      "auth_name": {
+        "type": "string",
+        "description": "CRS authority name, e.g. EPSG, ESRI, OGC"
+      },
+      "code": {
+        "type": "string",
+        "description": "CRS code, e.g. 4326, 2181, CRS84"
+      },
+      "link": {
+        "type": "string",
+        "description": "Relative link to PROJJSON representation of CRS"
+      }
+    }
+  }
+}

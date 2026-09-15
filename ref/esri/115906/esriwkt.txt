@@ -1,0 +1,1 @@
+VERTCS["SRGI2013",DATUM["Sistem_Referensi_Geospasial_Indonesia_2013",SPHEROID["WGS_1984",6378137.0,298.257223563]],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",1.0],UNIT["Meter",1.0]]

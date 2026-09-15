@@ -1,0 +1,1 @@
+VERTCS["CBVD61_height",VDATUM["Cayman_Brac_Vertical_Datum_1961"],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",1.0],UNIT["foot",0.3048]]

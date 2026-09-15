@@ -1,0 +1,1 @@
++proj=geocent +ellps=GSK2011 +units=m +no_defs +type=crs

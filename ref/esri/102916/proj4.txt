@@ -1,0 +1,1 @@
++proj=lcc +lat_1=40.15 +lat_0=40.15 +lon_0=-88 +k_0=1.000026 +x_0=99974.5999491999 +y_0=860147.320294641 +ellps=GRS80 +units=us-ft +no_defs +type=crs

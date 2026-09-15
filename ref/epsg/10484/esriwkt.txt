@@ -1,0 +1,1 @@
+VERTCS["DVR90(2013)_height",VDATUM["Dansk_Vertikal_Reference_1990_(2013)"],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",1.0],UNIT["Meter",1.0]]

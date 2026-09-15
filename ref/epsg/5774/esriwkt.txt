@@ -1,0 +1,1 @@
+VERTCS["NG95_height",VDATUM["Nivellement_General_du_Luxembourg"],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",1.0],UNIT["Meter",1.0]]

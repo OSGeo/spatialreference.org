@@ -1,0 +1,1 @@
++proj=tmerc +lat_0=54 +lon_0=-166 +k=0.9999 +x_0=152400.30480061 +y_0=0 +datum=NAD27 +units=us-ft +no_defs +type=crs

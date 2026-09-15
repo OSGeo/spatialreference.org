@@ -1,0 +1,1 @@
+GEOGCS["GCS_Himalia_2015_-_Sphere_Ocentric",DATUM["D_Himalia_2015_-_Sphere",SPHEROID["Himalia_2015_-_Sphere",85000.0,0.0]],PRIMEM["Reference_Meridian",0.0],UNIT["Degree",0.0174532925199433]]

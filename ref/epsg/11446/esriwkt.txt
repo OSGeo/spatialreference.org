@@ -1,0 +1,1 @@
+VERTCS["NGFA_2022_height",VDATUM["Nivellement_General_de_Futuna_et_d_Alofi_2022"],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",1.0],UNIT["Meter",1.0]]
